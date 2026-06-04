@@ -11,7 +11,8 @@ def pearson(pairs):
     return cov/(sx*sy)
 
 bert_path, tsv_path, json_path = sys.argv[1], sys.argv[2], sys.argv[3]
-max_off = int(sys.argv[4]) if len(sys.argv)>4 else 200
+max_off = int(sys.argv[4]) if len(sys.argv)>4 else 30
+min_off = -10
 
 bert = json.load(open(bert_path))
 bert_val = bert["valence"]
@@ -26,7 +27,7 @@ H=len(human)
 print(f"human PleasantOther: {H}s   bert grid: {len(bert_val)}s  (dialogue secs: {sum(1 for v in bert_val if not math.isnan(v))})")
 
 results=[]
-for off in range(0, max_off+1):
+for off in range(min_off, max_off+1):
     pairs=[]
     for t,v in enumerate(bert_val):
         if math.isnan(v): continue
