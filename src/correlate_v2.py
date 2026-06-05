@@ -1,3 +1,7 @@
+# DEPRECATED (June 5 2026): broken block bootstrap — resampled blocks on the
+# dialogue-only collapsed signal, breaking real-time autocorrelation and
+# overstating significance. Superseded by correlate_v3.py. Kept ONLY to
+# reproduce the old archived numbers. Do not use for new analysis.
 import json, sys, math, gzip, csv, random
 
 def pearson(xs, ys):
