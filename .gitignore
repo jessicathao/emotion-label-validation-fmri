@@ -244,3 +244,4 @@ data/transcripts/*_gemini-pro_cache.jsonl
 *.key
 *_key.txt
 secrets.*
+data/transcripts/*_gemini_context_cache.jsonl
