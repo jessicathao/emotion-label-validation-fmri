@@ -231,3 +231,10 @@ ds004872/
 # Keep small text outputs that ARE the work
 !data/transcripts/*.json
 !data/subs/*.srt
+
+# Gemini probe resume caches (scaffolding, not results)
+data/transcripts/*_gemini_cache.jsonl
+data/transcripts/*_gemini-pro_cache.jsonl
+
+# Personal working notes - keep out of public repo
+*_for_knowledge.md

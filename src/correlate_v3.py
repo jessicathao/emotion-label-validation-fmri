@@ -77,7 +77,7 @@ if lo is None:
     sig = "CI unavailable"
     ci_str = "[   n/a   ]"
 else:
-    sig = "SIGNIFICANT" if (lo > 0 or hi < 0) else "not sig (CI spans 0)"
+    sig = "(descriptive CI; significance withdrawn per June5 calibration)"
     ci_str = f"[{lo:+.3f},{hi:+.3f}]"
 
 name = bert_path.split("/")[-1].replace("_bert.json", "")
