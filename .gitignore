@@ -238,3 +238,9 @@ data/transcripts/*_gemini-pro_cache.jsonl
 
 # Personal working notes - keep out of public repo
 *_for_knowledge.md
+
+# Never commit secrets
+.env
+*.key
+*_key.txt
+secrets.*
