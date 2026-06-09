@@ -1,4 +1,4 @@
-# lang_brain_project
+# emotion-label-validation-fmri
 
 **Validating transformer-generated emotion labels against human consensus in naturalistic film fMRI**
 
@@ -150,25 +150,18 @@ the model.
 
 ## Repository layout
 ```
-make_gemini_signal.py     per-segment LLM valence probe (model-agnostic, cached)
-batch_llm_probe.py        run the probe + correlation over all dialogue films
-mask_signal.py            null out contaminated second-ranges from a signal
-spaceman_decontam_all.py  apply one decontamination cut across all models
-make_forest_bert_gemini.py   BERT-vs-LLM absolute forest (vs the 0.58 inter-rater reference)
-make_delta_forest.py         slide-6 paired-difference (Gemini minus BERT) forest
-make_context_progression.py  word-level BERT -> isolated LLM -> context LLM slope chart
-make_spaceman_mechanism.py   per-model decontamination shift figure
 src/
-  correlate_v3.py            alignment + correlation + real-timeline bootstrap CI
-  make_forest_figure.py      12-film BERT-vs-human forest (the slide-4 figure)
-  decode_valence_poc.py      occipital valence decode proof-of-concept (sub-S07)
-  bootstrap_calibration.py   calibration showing significance is not testable here
+  figures/        scripts that build the deck and result figures
+  signals/        build the per-segment BERT and Gemini valence signals + transcript prep
+  contamination/  find and remove transcription artifacts (songs, recited verse, credits)
+  analysis/       alignment, correlation, calibration, controls, brain decoding
 data/
   subs/          film subtitle files (.srt)
   transcripts/   processed transcripts + per-model 1 Hz signals (.json)
-figures/         all generated figures (.png / .pdf); every make_*.py writes here
+figures/         all generated figures (.png / .pdf)
 results/ docs/ notebooks/   tabular outputs, notes, exploration
 ```
+Run scripts from the repo root, e.g. `python src/figures/make_delta_forest.py`.
 Large/private data (brain images, film media) and resume caches are gitignored.
 
 ## Progress
