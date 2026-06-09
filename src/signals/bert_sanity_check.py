@@ -49,6 +49,6 @@ try:
     print("  model card reports ~89% on its own eval.")
 except Exception as e:
     print(f"  benchmark skipped: {e}")
-    print("  (smoke test above still tells you a lot)")
+    print("  (smoke test above is still informative)")
 
 print("\nDone.")

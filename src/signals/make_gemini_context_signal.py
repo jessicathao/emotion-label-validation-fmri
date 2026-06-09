@@ -18,7 +18,7 @@ TRANSCRIPT : the SAME _filt3.json used by BERT/isolation Gemini
 OUT        : output signal json (same schema as make_bert_signal output)
 grid_len   : optional int; total seconds in the 1 Hz grid (default: ceil(max end))
 
-Env: GEMINI_API_KEY must be set (same as your isolation probe).
+Env: GEMINI_API_KEY must be set (same as the isolation probe).
 """
 import sys, os, json, math, time, argparse, urllib.request, urllib.error
 

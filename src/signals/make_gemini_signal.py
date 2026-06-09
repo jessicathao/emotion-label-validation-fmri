@@ -29,7 +29,7 @@ Interface parity with make_bert_signal.py (verified against repo):
 
 Usage
 -----
-  export GEMINI_API_KEY=...                       # already in your env
+  export GEMINI_API_KEY=...                       # set in the environment
   conda activate lang_brain_project
   python make_gemini_signal.py \
       data/transcripts/TearsOfSteel.json \
@@ -45,7 +45,7 @@ Usage
       <pleasantother_sidecar.json> 2
   # compare the printed r to BERT's +0.356.
 
-  Pass the SAME grid_length_s you used for TearsOfSteel_bert.json (its
+  Pass the SAME grid_length_s used for TearsOfSteel_bert.json (its
   "duration_s" = 567) so the two grids line up second-for-second.
 """
 

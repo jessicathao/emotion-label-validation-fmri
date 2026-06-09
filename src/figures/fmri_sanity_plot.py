@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""'Go through one participant' fMRI sanity check (Joshua's ask).
+"""Single-participant fMRI sanity check.
 Loads one preprocessed BOLD file, prints structural summary, plots whole-brain
 and posterior-ROI mean BOLD time courses. NOT a decoder, data inspection only.
 Run from anywhere; needs the file materialized via datalad get."""
