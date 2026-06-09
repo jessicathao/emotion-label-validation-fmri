@@ -21,7 +21,7 @@ PO_IDX, OFFSET = 3, 2
 # IDENTICAL to spaceman_lyric_check.py
 CONTAM = [(526, 596), (703, 709), (787, 805)]
 
-REPO = os.path.expanduser("~/lang_brain_project/data/transcripts")
+REPO = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "transcripts")
 MEDIA = os.path.expanduser("~/emofilm/media")
 
 # model -> candidate signal paths (repo first, then media)

@@ -29,7 +29,7 @@ uses the identical, already-validated code paths (no reimplementation risk).
 Usage
 -----
   conda activate lang_brain_project
-  cd ~/lang_brain_project
+  cd ~/emotion-label-validation-fmri
   python batch_llm_probe.py
   # add --dry-run to print the plan without calling the API
   # add --skip-probe to ONLY re-run correlations on existing _gemini.json files
@@ -46,8 +46,8 @@ HOME = os.path.expanduser("~")
 MEDIA = os.path.join(HOME, "emofilm", "media")            # *_filt3.json, *_bert.json live here
 ANNOT = os.path.join(HOME, "ds004872", "derivatives")     # Annot_<Film>_stim.{tsv.gz,json}
 OUTDIR = "data/transcripts"                                # where _gemini.json signals go
-PROBE = "make_gemini_signal.py"
-CORRELATE = "src/correlate_v3.py"
+PROBE = "src/signals/make_gemini_signal.py"
+CORRELATE = "src/analysis/correlate_v3.py"
 MODEL = "gemini-3.5-flash"
 OFFSET = "2"
 

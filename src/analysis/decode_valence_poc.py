@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Valence decoding proof-of-concept — sub-S07, Tears of Steel (single run).
+"""Valence decoding proof-of-concept: sub-S07, Tears of Steel (single run).
 
 Decodes human-annotated valence (PleasantOther consensus) from occipital BOLD,
 and attempts a fair human-vs-automatic (Gemini-context) comparison on the SAME
@@ -19,7 +19,7 @@ HONEST FRAMING (do not overclaim):
 RESULTS (this session, alpha=10000):
   * Human PleasantOther, 451 film volumes: predicted-vs-true r ~= +0.21 (stable
     across alpha 100/1000/10000 -> +0.16/+0.18/+0.21).
-  * Fair human-vs-Gemini comparison: UNDERPOWERED on ToS — only 70 shared
+  * Fair human-vs-Gemini comparison: UNDERPOWERED on ToS, only 70 shared
     volumes (Gemini-context scored on 147/567 s; ToS is dialogue-light), so the
     comparison r's are NOT interpretable. Label-vs-label sanity on shared set
     r(human,gemini)=+0.63 (consistent with validated +0.60). A powered
@@ -97,7 +97,7 @@ print(f"\n[1] HUMAN PoC: {int(film_h.sum())} film volumes, alpha sweep:")
 for a in (100., 1000., 10000.):
     print(f"    alpha={a:7.0f}  predicted-vs-true r = {cv_r(X_all[film_h], y_h[film_h], alpha=a):+.3f}")
 
-# (2) fair comparison on shared (both-defined) volumes — UNDERPOWERED on ToS
+# (2) fair comparison on shared (both-defined) volumes, UNDERPOWERED on ToS
 both = ~np.isnan(y_h) & ~np.isnan(y_g)
 Xb = X_all[both]; yh = y_h[both]; yg = y_g[both]
 print(f"\n[2] FAIR COMPARISON: {int(both.sum())} shared volumes (alpha={ALPHA:.0f})")

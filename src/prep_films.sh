@@ -1,5 +1,5 @@
 #!/bin/bash
-SRC="$HOME/lang_brain_project/src"
+SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/signals"
 OUT="$HOME/emofilm/media/whisper_out"
 WORK="$HOME/emofilm/media"
 

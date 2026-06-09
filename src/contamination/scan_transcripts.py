@@ -55,12 +55,12 @@ for fn in FILES:
         if c >= 3:
             print(f"  [REPEAT x{c}] {txt[:70]}")
 
-    # 3) long single segments (>=12s) — possible song/montage held text
+    # 3) long single segments (>=12s), possible song/montage held text
     for _,st,en,t in segs:
         if en-st >= 12:
             print(f"  [LONG {en-st}s] {st}s: {t[:75]}")
 
-    # 4) gap then isolated block (>=20s silence before a segment) — montage/song marker
+    # 4) gap then isolated block (>=20s silence before a segment), montage/song marker
     for i in range(1,len(segs)):
         gap = segs[i][1] - segs[i-1][2]
         if gap >= 20:
