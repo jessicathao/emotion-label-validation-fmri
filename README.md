@@ -55,7 +55,8 @@ valence only weakly, and only where emotion is carried in explicit dialogue:
 - On a sparse-dialogue film (Sintel) the null is **model-independent**: the
   strongest available model (Gemini 3.1 Pro) also recovers nothing.
 - **Against the human reference levels** (PleasantOther inter-rater r ≈ 0.58,
-  dataset-mean inter-rater r ≈ 0.39), the isolation labels stay below the 0.58
+  dataset-mean inter-rater r ≈ 0.39, both as reported in Morgenroth et al. 2025),
+  the isolation labels stay below the 0.58
   reference; the LLM's isolation best (Tears of Steel, r ≈ 0.47) sits between the
   two reference levels. The 0.58 figure is pairwise inter-rater, a different and
   noisier yardstick than the averaged consensus the models are scored against, so
@@ -130,8 +131,11 @@ Significance testing is deliberately withheld: calibration (`bootstrap_calibrati
 shows the block bootstrap is far too liberal on single short films, because the
 annotation autocorrelation time (~80–110 s) dwarfs any usable block size. The
 finding therefore rests on effect sizes plus cross-model and cross-film
-replication. Human reference levels: dataset-mean inter-rater r ≈ 0.39;
-PleasantOther (highest-agreement item) r ≈ 0.58.
+replication. Human reference levels are the values reported in Morgenroth et al.
+2025: dataset-mean inter-rater r ≈ 0.39 (their mean agreement across all items and
+films; the abstract rounds this to 0.38), and PleasantOther (highest-agreement
+item) r ≈ 0.58. The per-rater time series are not in the public derivatives, so
+these are cited from the paper, not recomputed here.
 
 A contamination check is part of the method: Whisper transcribes non-dialogue
 audio (songs, recited verse, credit tails) as text, which sentiment models then
@@ -196,6 +200,10 @@ ABIDE II), and reproducible-research practices (Git, FAIR, OSF).
 ## References
 - Morgenroth, E., et al. (2025). Emo-FilM: A multimodal dataset for affective
   neuroscience using naturalistic stimuli. *Scientific Data, 12*, 684.
+- Morgenroth, E., Moia, S., Vilaclara, L., Fournier, R., Muszynski, M.,
+  Ploumitsakou, M., Almato-Bellavista, M., Vuilleumier, P., & Van De Ville, D.
+  (2024). Emo-FilM: A multimodal dataset for affective neuroscience using
+  naturalistic stimuli. *PsyArXiv*. https://doi.org/10.31234/osf.io/qzdbu
 
 ## Acknowledgments
 Brainhack School 2026 organizers and TAs across the Taipei and Singapore hubs.

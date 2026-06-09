@@ -32,6 +32,10 @@ DATA = [
 fig, ax = plt.subplots(figsize=(8.4, 6.0))
 
 # human reference bands
+# Human reference lines, cited from Morgenroth et al. 2025 (not recomputed here:
+# the per-rater series are not in the public derivatives). 0.58 = their reported
+# PleasantOther inter-rater agreement (highest-agreement item); 0.39 = their mean
+# agreement across all items and films (abstract rounds it to 0.38).
 ax.axhline(0.58, color="#1B9E77", lw=1.4, ls="--", zorder=1)
 ax.axhline(0.39, color="#7A8B2B", lw=1.2, ls=":", zorder=1)
 ax.axhline(0.0, color="#999999", lw=1.0, zorder=1)

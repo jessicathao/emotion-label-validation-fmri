@@ -37,6 +37,10 @@ for y, (name, r, lo, hi, role) in zip(ys, films):
     ax.plot([hi, hi], [y-0.12, y+0.12], color=c, lw=lw, zorder=2)
     ax.plot(r, y, "o", color=c, markersize=ms, zorder=3)
 ax.axvline(0, color="#5F5E5A", lw=1.8, zorder=1)
+# Human reference lines, cited from Morgenroth et al. 2025 (not recomputed here:
+# the per-rater series are not in the public derivatives). 0.58 = their reported
+# PleasantOther inter-rater agreement (highest-agreement item); 0.39 = their mean
+# agreement across all items and films (abstract rounds it to 0.38).
 ax.axvline(0.58, color="#1D9E75", lw=1.6, ls="--", zorder=1)
 ax.axvline(0.39, color="#7A9E1D", lw=1.4, ls=":", zorder=1)
 ax.text(0.36, len(films)-0.15, "dataset mean\ninter-rater (r=0.39)", color="#5A7016",

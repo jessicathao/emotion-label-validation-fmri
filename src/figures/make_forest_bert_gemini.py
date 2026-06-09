@@ -58,16 +58,19 @@ for i, (film, d) in enumerate(order):
 
 ax.axvline(0, color=ZERO_C, lw=1.0, ls="--", zorder=1)
 
-# Human inter-rater reference lines (from Morgenroth et al. 2025), matching the
-# BERT forest figure so the two are directly comparable. These are the CEILING:
-# how well humans agree with each other -- the bar any automatic label must reach
-# to be a valid substitute.
+# Human inter-rater reference lines, cited from Morgenroth et al. 2025 (not
+# recomputed here: the per-rater series are not in the public derivatives), matching
+# the BERT forest figure so the two are directly comparable. 0.58 = their reported
+# PleasantOther inter-rater agreement (highest-agreement item); 0.39 = their mean
+# agreement across all items and films (abstract rounds it to 0.38). These are a
+# reference for how well humans agree with each other, on a different (pairwise)
+# denominator than the averaged consensus the models are scored against.
 ax.axvline(0.39, color="#7A8B2B", lw=1.4, ls=":", zorder=1)
 ax.axvline(0.58, color="#1B9E77", lw=1.6, ls="--", zorder=1)
 ymax = n - 0.4
-ax.text(0.39, ymax, "human mean\nr=0.39", color="#7A8B2B",
+ax.text(0.39, ymax, "dataset mean\ninter-rater r=0.39", color="#7A8B2B",
         fontsize=7.5, ha="center", va="top", linespacing=1.1)
-ax.text(0.58, ymax - 1.15, "PleasantOther\nceiling r=0.58", color="#1B9E77",
+ax.text(0.58, ymax - 1.15, "PleasantOther\ninter-rater r=0.58", color="#1B9E77",
         fontsize=7.5, ha="center", va="top", linespacing=1.1)
 
 # y labels: film name + (n), asterisk for contaminated, dagger for low-block
@@ -87,7 +90,7 @@ ax.set_xlabel("Pearson r with human PleasantOther valence  (+2 s offset)")
 ax.set_title("12 naturalistic films, Emo-FilM. Points = effect size; bars = "
              "descriptive 95% CI.\nFilms ordered by BERT r.",
              fontsize=9.5, fontweight="normal", color="#555", pad=10)
-fig.suptitle("Agreement with human valence: word-level BERT vs context-aware LLM",
+fig.suptitle("Agreement with human valence: per-segment BERT vs a stronger model (Gemini)",
              fontsize=14, fontweight="bold", y=0.98)
 
 ax.spines["top"].set_visible(False)
@@ -97,9 +100,9 @@ ax.set_axisbelow(True)
 
 legend_handles = [
     Line2D([0],[0], color=BERT_C, marker="o", lw=1.6, ms=7,
-           label="BERT (word-level sentiment)"),
+           label="BERT (per-segment sentiment)"),
     Line2D([0],[0], color=GEM_C, marker="s", lw=1.6, ms=6.5,
-           label="Gemini 3.5 Flash (context-aware)"),
+           label="Gemini 3.5 Flash (isolated segments)"),
     Line2D([0],[0], color="white", label="*  Whisper contamination (songs/credits)"),
     Line2D([0],[0], color="white", label="†  <16 bootstrap blocks (CI unreliable)"),
 ]
