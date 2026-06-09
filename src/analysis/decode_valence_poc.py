@@ -37,7 +37,7 @@ import warnings; warnings.filterwarnings("ignore")
 BOLD = os.path.expanduser("~/ds004892/derivatives/preprocessing/sub-S07/ses-1/func/"
                           "sub-S07_ses-1_task-TearsOfSteel_space-MNI_desc-ppres_bold.nii.gz")
 ANNOT = os.path.expanduser("~/ds004872/derivatives/Annot_TearsOfSteel_stim.tsv.gz")
-GEMINI = os.path.expanduser("~/lang_brain_project/data/transcripts/TearsOfSteel_gemini_context.json")
+GEMINI = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "transcripts", "TearsOfSteel_gemini_context.json")
 PLEASANTOTHER_COL = 3            # column index in the annotation table
 FILM_ONSET = 94.19099301198548  # scan events: film onset (s)
 ALPHA = 10000.0

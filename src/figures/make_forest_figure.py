@@ -59,8 +59,8 @@ legend_items = [
 ax.legend(handles=legend_items, loc="upper left", bbox_to_anchor=(0.0, 0.95),
           fontsize=8.5, frameon=True, framealpha=0.9, edgecolor="none")
 plt.tight_layout()
-# write to the repo's figures/ folder (this script is in src/, so go up one level)
-outdir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "figures")
+# write to the repo's figures/ folder (this script is in src/figures/, so go up two levels)
+outdir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "figures")
 os.makedirs(outdir, exist_ok=True)
 fig.savefig(os.path.join(outdir,"forest_bert_human.png"), dpi=200, bbox_inches="tight")
 fig.savefig(os.path.join(outdir,"forest_bert_human.pdf"), bbox_inches="tight")

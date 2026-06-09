@@ -6,7 +6,7 @@ import numpy as np
 
 ANNOT = os.path.expanduser("~/ds004872/derivatives/Annot_YouAgain_stim.tsv.gz")
 JSON  = os.path.expanduser("~/ds004872/derivatives/Annot_YouAgain_stim.json")
-BERT  = os.path.expanduser("~/lang_brain_project/data/transcripts/YouAgain_bert.json")
+BERT  = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "transcripts", "YouAgain_bert.json")
 OFFSET = 2
 SONG = [(582, 689)]   # sung Pushkin passage, 09:42-11:28
 

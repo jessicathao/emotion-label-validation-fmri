@@ -4,7 +4,7 @@ import json, gzip, os
 import numpy as np
 
 ANNOT = os.path.expanduser("~/ds004872/derivatives/Annot_Spaceman_stim.tsv.gz")
-BERT  = os.path.expanduser("~/lang_brain_project/data/transcripts/Spaceman_bert.json")
+BERT  = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "transcripts", "Spaceman_bert.json")
 PO_IDX, OFFSET = 3, 2
 
 # Lyric / credits second-ranges from the Whisper transcript (inclusive starts, exclusive ends)

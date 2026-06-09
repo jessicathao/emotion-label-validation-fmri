@@ -16,7 +16,7 @@ import json, gzip, glob, os
 import numpy as np
 
 ANNOT_DIR = os.path.expanduser("~/ds004872/derivatives")
-BERT_DIR  = os.path.expanduser("~/lang_brain_project/data/transcripts")
+BERT_DIR  = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "transcripts")
 PLEASANT_OTHER_IDX = 3          # zero-indexed column from the JSON sidecar
 OFFSET = 2                       # the fixed +2s used in the main analysis
 SWEEP = range(-10, 31)           # match align_correlate.py sweep

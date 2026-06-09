@@ -22,10 +22,10 @@ import warnings; warnings.filterwarnings("ignore")
 BOLD = os.path.expanduser("~/ds004892/derivatives/preprocessing/sub-S07/ses-1/func/"
                           "sub-S07_ses-1_task-TearsOfSteel_space-MNI_desc-ppres_bold.nii.gz")
 ANNOT = os.path.expanduser("~/ds004872/derivatives/Annot_TearsOfSteel_stim.tsv.gz")
-GEMINI = os.path.expanduser("~/lang_brain_project/data/transcripts/TearsOfSteel_gemini_context.json")
+GEMINI = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "transcripts", "TearsOfSteel_gemini_context.json")
 PO_COL = 3; FILM_ONSET = 94.19099301198548; K = 6
-# write figures to the repo's figures/ and tabular output to results/ (script is in src/)
-REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# write figures to the repo's figures/ and tabular output to results/ (script is in src/figures/)
+REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FIGDIR = os.path.join(REPO, "figures"); os.makedirs(FIGDIR, exist_ok=True)
 RESDIR = os.path.join(REPO, "results"); os.makedirs(RESDIR, exist_ok=True)
 
