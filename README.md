@@ -18,7 +18,7 @@ annotation?**
 ### Research questions
 1. **Agreement (done):** Do automatic sentiment labels, derived from film
    dialogue, correlate with the human consensus annotation? Tested for a
-   word-level classifier (BERT) and a context-aware LLM (Gemini 3.5 Flash)
+   per-segment classifier (BERT) and an LLM (Gemini 3.5 Flash)
    across 12 films, with three sentiment models on the cleanest film, plus a
    preliminary dialogue-context manipulation on four films.
 2. **Brain decoding (proof-of-concept):** Can those labels decode emotional
@@ -33,17 +33,18 @@ annotation?**
 Across 12 naturalistic films, automatic sentiment labels agree with human
 valence only weakly, and only where emotion is carried in explicit dialogue:
 
-- **Word-level BERT** reaches human-level agreement on just one film (Tears of
+- **Per-segment BERT** reaches human-level agreement on just one film (Tears of
   Steel, r ≈ 0.36), the most lexically explicit; elsewhere it clusters near zero,
   with apparent negatives traceable to transcription artifacts (songs and credits
   mis-scored as dialogue).
-- **A context-aware LLM** (Gemini 3.5 Flash), scoring the same isolated dialogue
-  segments through the same pipeline, agrees with humans somewhat more
+- **A stronger model** (Gemini 3.5 Flash), scoring the same segments in isolation
+  (each segment on its own, without the surrounding dialogue) through the same
+  pipeline, agrees with humans somewhat more
   consistently (it shifts most correlations positive and removes BERT's spurious
   negatives), but the gains are weak, partly concentrated in
   transcription-contaminated films, and absent on sparse-dialogue films.
-- **A preliminary dialogue-context manipulation** (plus or minus three segments,
-  four films) raises agreement monotonically on dialogue-driven films (Lesson
+- **A preliminary dialogue-context manipulation** (Gemini 3.5 Flash, plus or minus
+  three segments, four films) raises agreement monotonically on dialogue-driven films (Lesson
   Learned, Payload, Tears of Steel) and stays flat on a dialogue-light film
   (After the Rain), a principled null. On Tears of Steel context reaches
   consensus-level agreement (r ≈ 0.59) and survives dropping the most-changed
@@ -56,7 +57,7 @@ valence only weakly, and only where emotion is carried in explicit dialogue:
   reference; the LLM's isolation best (Tears of Steel, r ≈ 0.47) sits between the
   two reference levels. The 0.58 figure is pairwise inter-rater, a different and
   noisier yardstick than the averaged consensus the models are scored against, so
-  the context result above is "consensus-level on one film," not "beating humans."
+  the context result above (r ≈ 0.59) is "consensus-level on one film," not "beating humans."
 - **Brain decoding (proof-of-concept):** human valence decodes from one subject's
   occipital BOLD (sub-S07, Tears of Steel) at r ≈ 0.21, a valence-correlated
   visual signal rather than a pure affective one. The fair human-versus-automatic
@@ -64,9 +65,11 @@ valence only weakly, and only where emotion is carried in explicit dialogue:
   nothing is claimed from it; the result is the convergence of the label and
   neural arms on the same dialogue-density limit.
 
-Conclusion: text-based sentiment, even with a frontier LLM, is not a robust
+Conclusion: text-based sentiment, even with a frontier LLM, is not yet a robust
 substitute for human emotion annotation in naturalistic film. It tracks human
-valence substantially only when emotion is stated in the words. This is a
+valence substantially only where emotion is stated in the words; a stronger model
+with added context narrows the gap on dialogue-dense material, but that result is
+preliminary. This is a
 methodological as well as an empirical result: automatic text labels inherit
 every weakness of the transcription step, and emotion annotations are so
 autocorrelated that significance testing on single short films is infeasible, so
@@ -113,8 +116,8 @@ Film dialogue        per-segment              valence (1 Hz)
                               contiguous CV), comparing human vs automatic labels
 ```
 
-Each dialogue segment is scored **in isolation** (no surrounding context), so the
-word-level classifier and the context-aware LLM see identical input and the only
+Each dialogue segment is scored **on its own** (without the surrounding dialogue
+segments), so the per-segment classifier and the LLM see identical input and the only
 variable is the model. Signals are built on a 1 Hz grid, aligned to the scan with
 a fixed +2 s offset, and correlated against the human *PleasantOther* consensus.
 A preliminary context condition repeats this with a plus-or-minus-three-segment
