@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """'Go through one participant' fMRI sanity check (Joshua's ask).
 Loads one preprocessed BOLD file, prints structural summary, plots whole-brain
-and posterior-ROI mean BOLD time courses. NOT a decoder — data inspection only.
+and posterior-ROI mean BOLD time courses. NOT a decoder, data inspection only.
 Run from anywhere; needs the file materialized via datalad get."""
 import nibabel as nib, numpy as np, os
 import matplotlib
@@ -23,7 +23,7 @@ print(f"film block      : {FILM_ON:.1f}s - {FILM_OFF:.1f}s (from scan events)")
 # whole-brain mean over time (exclude zero/background voxels)
 brain = data != 0
 wb = np.array([data[..., t][brain[..., t]].mean() for t in range(T)])
-# posterior ROI box (visual cortex sees the film) — approximate, index-based
+# posterior ROI box (visual cortex sees the film), approximate, index-based
 y0 = int(Y*0.78); z0, z1 = int(Z*0.35), int(Z*0.65)
 roi = data[:, y0:, z0:z1, :]
 roi_mask = roi != 0
@@ -41,7 +41,9 @@ ax[1].set_xlabel("time (s)")
 ax[1].axvspan(FILM_ON, FILM_OFF, color="#1C7293", alpha=0.08)
 for a in ax: a.spines[["top", "right"]].set_visible(False)
 plt.tight_layout()
-out = os.path.expanduser("~/emofilm/figures/fmri_sub-S07_ToS.png")
-os.makedirs(os.path.dirname(out), exist_ok=True)
+# write to the repo's figures/ folder (this script is in src/, so go up one level)
+_figdir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "figures")
+os.makedirs(_figdir, exist_ok=True)
+out = os.path.join(_figdir, "fmri_sub-S07_ToS.png")
 fig.savefig(out, dpi=150, bbox_inches="tight")
 print("saved figure ->", out)

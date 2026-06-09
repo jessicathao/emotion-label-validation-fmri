@@ -70,7 +70,7 @@ def run(film, model_suffix, exclude):
     xs=[a for a,b in zip(x_full,y_full) if a is not None and b is not None]
     ys=[b for a,b in zip(x_full,y_full) if a is not None and b is not None]
     r=pearson(xs,ys); lo,hi=block_bootstrap_ci(x_full,y_full)
-    sig = "SIG" if (lo is not None and (lo>0 or hi<0)) else "ns "
+    sig = "CI excludes 0" if (lo is not None and (lo>0 or hi<0)) else "CI spans 0  "
     ci = f"[{lo:+.3f},{hi:+.3f}]" if lo is not None else "[n/a]"
     return f"r={r:+.3f} {ci} n={len(xs)} {sig}"
 

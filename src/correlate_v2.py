@@ -1,4 +1,4 @@
-# DEPRECATED (June 5 2026): broken block bootstrap — resampled blocks on the
+# DEPRECATED (June 5 2026): broken block bootstrap, resampled blocks on the
 # dialogue-only collapsed signal, breaking real-time autocorrelation and
 # overstating significance. Superseded by correlate_v3.py. Kept ONLY to
 # reproduce the old archived numbers. Do not use for new analysis.
@@ -30,6 +30,9 @@ def block_bootstrap_ci(xs, ys, n_boot=2000, block=20, seed=0):
     rs.sort()
     return rs[int(0.025*len(rs))], rs[int(0.975*len(rs))]
 
+print("[DEPRECATED] correlate_v2.py reproduces pre-June-5 archived numbers only.")
+print("[DEPRECATED] Its block bootstrap is anticonservative; significance is")
+print("[DEPRECATED] withdrawn project-wide (see correlate_v3.py). CI is descriptive.")
 bert_path, tsv_path, json_path = sys.argv[1], sys.argv[2], sys.argv[3]
 fixed_off = int(sys.argv[4]) if len(sys.argv)>4 else 2
 bert_val = json.load(open(bert_path))["valence"]
@@ -48,6 +51,6 @@ for t,v in enumerate(bert_val):
         xs.append(v); ys.append(human[ht])
 r=pearson(xs,ys)
 lo,hi=block_bootstrap_ci(xs,ys)
-sig = "SIGNIFICANT" if (lo>0 or hi<0) else "not sig (CI spans 0)"
+sig = "[archived: CI excludes 0]" if (lo>0 or hi<0) else "[archived: CI spans 0]"
 name=bert_path.split("/")[-1].replace("_bert.json","")
 print(f"{name:18s} r={r:+.3f}  95%CI[{lo:+.3f},{hi:+.3f}]  n={len(xs)}  offset={fixed_off}s  {sig}")

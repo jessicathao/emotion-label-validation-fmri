@@ -1,0 +1,7 @@
+Analysis,Target,n volumes,predicted-vs-true r,Note
+Human PoC (alpha=100),PleasantOther,451,+0.160,"modest, stable"
+Human PoC (alpha=1000),PleasantOther,451,+0.178,"modest, stable"
+Human PoC (alpha=10000),PleasantOther,451,+0.208,best/most-regularized
+Fair comparison,PleasantOther,70,+0.036,underpowered (n too small)
+Fair comparison,Gemini-context,70,-0.359,underpowered (n too small)
+Label-vs-label sanity,human vs gemini,70,+0.632,consistent w/ validated +0.60

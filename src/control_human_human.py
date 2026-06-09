@@ -1,3 +1,6 @@
+# POSITIVE CONTROL: human-vs-human correlations, to confirm the pipeline math.
+# The CI flag below is DESCRIPTIVE (does the bootstrap CI exclude 0); significance
+# is withheld project-wide. This checks the method, it is not a reported result.
 import json, sys, math, gzip, csv, random
 
 def pearson(xs, ys):
@@ -32,7 +35,7 @@ with gzip.open(tsv,"rt") as f:
 def test(a,b,expect):
     xs,ys=data[a],data[b]
     r=pearson(xs,ys); lo,hi=boot_ci(xs,ys)
-    sig = "SIG" if (lo>0 or hi<0) else "ns "
+    sig = "CI excludes 0" if (lo>0 or hi<0) else "CI spans 0  "
     print(f"  {a:16s} vs {b:16s}  r={r:+.3f}  CI[{lo:+.3f},{hi:+.3f}]  {sig}   (expect {expect})")
 
 print("POSITIVE CONTROL - human vs human, same film, same pipeline math\n")

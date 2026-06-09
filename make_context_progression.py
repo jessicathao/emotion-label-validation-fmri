@@ -35,10 +35,10 @@ fig, ax = plt.subplots(figsize=(8.4, 6.0))
 ax.axhline(0.58, color="#1B9E77", lw=1.4, ls="--", zorder=1)
 ax.axhline(0.39, color="#7A8B2B", lw=1.2, ls=":", zorder=1)
 ax.axhline(0.0, color="#999999", lw=1.0, zorder=1)
-ax.text(-0.20, 0.58, "human ceiling 0.58", color="#1B9E77", fontsize=8,
-        va="bottom", ha="left")
-ax.text(-0.20, 0.39, "human mean 0.39", color="#7A8B2B", fontsize=8,
-        va="bottom", ha="left")
+ax.text(-0.20, 0.585, "PleasantOther inter-rater 0.58 (different denominator)",
+        color="#1B9E77", fontsize=8, va="bottom", ha="left")
+ax.text(-0.20, 0.395, "dataset mean inter-rater 0.39",
+        color="#7A8B2B", fontsize=8, va="bottom", ha="left")
 
 for name, vals, color, is_flat in DATA:
     lw = 2.6 if not is_flat else 2.2
@@ -59,7 +59,7 @@ ax.set_xticklabels(CONDS)
 ax.set_xlim(-0.25, 3.45)
 ax.set_ylim(-0.32, 0.72)
 ax.set_ylabel("Pearson r with human PleasantOther valence")
-ax.set_title("More context, better agreement\u2014only where dialogue carries emotion",
+ax.set_title("More context, better agreement, only where dialogue carries emotion",
              fontsize=12, pad=34)
 fig.suptitle("4-film preliminary probe", fontsize=10, color="#777", y=0.965)
 
@@ -75,15 +75,15 @@ legend_handles = [
            markerfacecolor=FLAT, markeredgecolor="white",
            label="dialogue-light (no rescue)"),
 ]
-ax.legend(handles=legend_handles, loc="upper left", frameon=True,
-          framealpha=0.95, edgecolor="#CCCCCC", fontsize=9)
+ax.legend(handles=legend_handles, loc="upper center", bbox_to_anchor=(0.5, -0.13),
+          ncol=2, frameon=False, fontsize=9)
 
 fig.text(0.5, 0.015,
          "Same pipeline; only the model input changes. Descriptive CIs not shown; "
          "significance withheld. All 4 films uncontaminated.",
          ha="center", va="bottom", fontsize=8, color="#666")
 
-plt.subplots_adjust(left=0.11, right=0.80, top=0.82, bottom=0.14)
+plt.subplots_adjust(left=0.11, right=0.80, top=0.82, bottom=0.22)
 import os
 os.makedirs("figures", exist_ok=True)
 for ext in ("png", "pdf"):
