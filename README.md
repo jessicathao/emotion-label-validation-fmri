@@ -48,7 +48,9 @@ valence only weakly, and only where emotion is carried in explicit dialogue:
   Learned, Payload, Tears of Steel) and stays flat on a dialogue-light film
   (After the Rain), a principled null. On Tears of Steel context reaches
   consensus-level agreement (r ≈ 0.59) and survives dropping the most-changed
-  seconds, so it is not reducible to smoothing. Preliminary, four films,
+  seconds, so it is not reducible to smoothing. This is a within-Gemini result
+  (isolation vs context, same model); context was not run on BERT, so no
+  context-based BERT-vs-Gemini claim is made. Preliminary, four films,
   significance withheld.
 - On a sparse-dialogue film (Sintel) the null is **model-independent**: the
   strongest available model (Gemini 3.1 Pro) also recovers nothing.
@@ -68,7 +70,7 @@ valence only weakly, and only where emotion is carried in explicit dialogue:
 Conclusion: text-based sentiment, even with a frontier LLM, is not yet a robust
 substitute for human emotion annotation in naturalistic film. It tracks human
 valence substantially only where emotion is stated in the words; a stronger model
-with added context narrows the gap on dialogue-dense material, but that result is
+with added context narrows the gap with the human consensus on dialogue-dense material, but that result is
 preliminary. This is a
 methodological as well as an empirical result: automatic text labels inherit
 every weakness of the transcription step, and emotion annotations are so
@@ -183,6 +185,7 @@ Large/private data (brain images, film media) and resume caches are gitignored.
 - [x] Context condition (dialogue-context window), preliminary, four films
 - [x] Brain decoding, single-subject occipital proof-of-concept run
 - [ ] Powered, multi-subject human vs automatic decode on a dialogue-dense film
+- [ ] Run the context condition on BERT too, for a symmetric context comparison
 - [ ] Singapore symposium presentation (June 2026)
 
 ## Background
