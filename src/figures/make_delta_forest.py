@@ -78,7 +78,7 @@ ax.set_xlabel("Change in agreement with human valence  (Gemini \u2212 BERT, Pear
 ax.tick_params(axis="x", labelsize=10.5, colors=INK)
 
 # title
-ax.set_title("Context-aware LLM shifts agreement upward on 10 of 12 films",
+ax.set_title("A stronger model shifts agreement upward on 10 of 12 films",
              fontsize=14, color=INK, fontweight="bold", pad=30, loc="center")
 ax.text(0.5, 1.015,
         "Per-film paired difference; each film is its own control. Positive = Gemini agrees with humans more than BERT.",

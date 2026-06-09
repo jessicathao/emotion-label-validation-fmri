@@ -16,7 +16,7 @@ plt.rcParams.update({
     "pdf.fonttype": 42, "ps.fonttype": 42,
 })
 
-CONDS = ["word-level\nBERT", "isolated\nLLM", "context\nLLM"]
+CONDS = ["per-segment\nBERT", "isolated\nLLM", "context\nLLM"]
 X = [0, 1, 2]
 
 # film: (values across 3 conditions, color, is_flat)
