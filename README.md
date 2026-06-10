@@ -16,7 +16,7 @@ film dialogue well enough to complement, and help scale, slow and costly human
 annotation?**
 
 ### Research questions
-1. **Agreement (done):** Do automatic sentiment labels, derived from film
+1. **Agreement (preliminary):** Do automatic sentiment labels, derived from film
    dialogue, correlate with the human consensus annotation? Tested for a
    per-segment classifier (BERT) and an LLM (Gemini 3.5 Flash)
    across 12 films, with three sentiment models on the cleanest film, plus a
@@ -28,7 +28,7 @@ annotation?**
 
 ## Findings so far
 
-*Preliminary: Brainhack School 2026 project, not yet peer-reviewed.*
+*Preliminary: Brainhack School 2026 project.*
 
 Across 12 naturalistic films, automatic sentiment labels agree with human valence
 only weakly, and only where emotion is carried in explicit dialogue:
