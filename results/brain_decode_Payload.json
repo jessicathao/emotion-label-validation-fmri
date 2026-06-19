@@ -1,0 +1,17 @@
+{
+  "film": "Payload",
+  "subjects": ["sub-S08", "sub-S05", "sub-S11", "sub-S15", "sub-S06"],
+  "n_volumes_total": 3873,
+  "positive_control_pooled": {
+    "timescales_s": [250, 150, 100, 60, 30],
+    "recovery_r_snr1": [0.326, 0.281, 0.276, 0.302, 0.319],
+    "recovery_r_snr0_3": [0.090, 0.081, 0.074, 0.109, 0.107],
+    "valence_timescale_s": 100
+  },
+  "real_valence_pooled": {
+    "loso_r_per_subject": [0.079, -0.108, 0.177, 0.020, -0.002],
+    "loso_mean": 0.033,
+    "shift_null_mean": 0.044,
+    "shift_null_sd": 0.013
+  }
+}

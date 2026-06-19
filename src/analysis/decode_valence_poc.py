@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# DEPRECATED: raw pooled predicted-vs-true r is the drift-prone metric. Use decode_brain.py
+# (within-fold + leave-one-subject-out, validated by a planted-signal positive control).
 """Valence decoding proof-of-concept: sub-S07, Tears of Steel (single run).
 
 Decodes human-annotated valence (PleasantOther consensus) from occipital BOLD,
