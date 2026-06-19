@@ -1,0 +1,764 @@
+{
+  "film": "Payload",
+  "source": "srt",
+  "duration_s": 998.0,
+  "n_segments": 151,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 10.0,
+      "text": "We've entered the stratosphere in a commencing final descent over."
+    },
+    {
+      "start": 10.0,
+      "end": 20.0,
+      "text": "We've entered the stratosphere in a commencing final descent over."
+    },
+    {
+      "start": 20.0,
+      "end": 37.0,
+      "text": "We've entered the stratosphere in a commencing final descent over."
+    },
+    {
+      "start": 37.0,
+      "end": 49.0,
+      "text": "Ten, nine, eight, seven, six, five, four, three, two, one, zero."
+    },
+    {
+      "start": 49.0,
+      "end": 52.0,
+      "text": "Told you I could do it. I never doubted you."
+    },
+    {
+      "start": 52.0,
+      "end": 56.0,
+      "text": "Bullshit. Language, Simon, language."
+    },
+    {
+      "start": 67.0,
+      "end": 77.0,
+      "text": "Come on, Dave, get your ass moving, yellow."
+    },
+    {
+      "start": 98.0,
+      "end": 101.0,
+      "text": "We're in real luck. It's a Clarkstown cap."
+    },
+    {
+      "start": 101.0,
+      "end": 103.0,
+      "text": "If you cap here and here, we'll get in real quick."
+    },
+    {
+      "start": 113.0,
+      "end": 114.0,
+      "text": "Shit."
+    },
+    {
+      "start": 116.0,
+      "end": 117.0,
+      "text": "Go."
+    },
+    {
+      "start": 127.0,
+      "end": 147.0,
+      "text": "Get your dad out of here."
+    },
+    {
+      "start": 157.0,
+      "end": 159.0,
+      "text": "Go."
+    },
+    {
+      "start": 187.0,
+      "end": 208.0,
+      "text": "Well, well, well. Three counter boys. What'll be peddling this evening?"
+    },
+    {
+      "start": 208.0,
+      "end": 210.0,
+      "text": "Just got to get my dad to the medic."
+    },
+    {
+      "start": 210.0,
+      "end": 212.0,
+      "text": "Anything to declare?"
+    },
+    {
+      "start": 212.0,
+      "end": 214.0,
+      "text": "No, sir. Please, can I get my dad?"
+    },
+    {
+      "start": 214.0,
+      "end": 215.0,
+      "text": "What's that?"
+    },
+    {
+      "start": 217.0,
+      "end": 226.0,
+      "text": "All right, let's have your ID sent."
+    },
+    {
+      "start": 226.0,
+      "end": 227.0,
+      "text": "Here's your day passes."
+    },
+    {
+      "start": 230.0,
+      "end": 231.0,
+      "text": "Welcome to Clarkstown."
+    },
+    {
+      "start": 240.0,
+      "end": 242.0,
+      "text": "You wanted to know if Adam Carter came in?"
+    },
+    {
+      "start": 242.0,
+      "end": 244.0,
+      "text": "Yeah, he's here now."
+    },
+    {
+      "start": 244.0,
+      "end": 247.0,
+      "text": "Check him in. I'll deal with it."
+    },
+    {
+      "start": 256.0,
+      "end": 258.0,
+      "text": "Where are the other girls, honey?"
+    },
+    {
+      "start": 258.0,
+      "end": 259.0,
+      "text": "Girls."
+    },
+    {
+      "start": 259.0,
+      "end": 262.0,
+      "text": "This isn't the deal. Get over here."
+    },
+    {
+      "start": 268.0,
+      "end": 272.0,
+      "text": "I've got a whole lot of hungry men here and she ain't going to feed them all."
+    },
+    {
+      "start": 272.0,
+      "end": 276.0,
+      "text": "So I'm going to take something from you and make it fair on me."
+    },
+    {
+      "start": 276.0,
+      "end": 280.0,
+      "text": "Guys, take two tonne off this can before we load it back on tomorrow's crawler."
+    },
+    {
+      "start": 280.0,
+      "end": 281.0,
+      "text": "Fuck sakes."
+    },
+    {
+      "start": 281.0,
+      "end": 285.0,
+      "text": "Fuck sakes. You better make sure I get what I paid for."
+    },
+    {
+      "start": 285.0,
+      "end": 290.0,
+      "text": "Or I'm going to stick you in a dress and a wig and put you in a small dark room with these animals."
+    },
+    {
+      "start": 290.0,
+      "end": 291.0,
+      "text": "Got it?"
+    },
+    {
+      "start": 291.0,
+      "end": 297.0,
+      "text": "So, Officer Henshaw, what seems to be the problem?"
+    },
+    {
+      "start": 297.0,
+      "end": 300.0,
+      "text": "I'm pretty sure we need that carbon fibre up at the space dock."
+    },
+    {
+      "start": 300.0,
+      "end": 303.0,
+      "text": "Sir, it seems Manny here had a stall way."
+    },
+    {
+      "start": 303.0,
+      "end": 306.0,
+      "text": "And what has that got to do with the carbon force?"
+    },
+    {
+      "start": 306.0,
+      "end": 309.0,
+      "text": "Sir, we're taking her in for questioning."
+    },
+    {
+      "start": 309.0,
+      "end": 313.0,
+      "text": "Perhaps you'd like to question the prisoner yourself, sir?"
+    },
+    {
+      "start": 321.0,
+      "end": 323.0,
+      "text": "Yes, sir."
+    },
+    {
+      "start": 352.0,
+      "end": 355.0,
+      "text": "Adam, you might want to ask your boys to leave."
+    },
+    {
+      "start": 373.0,
+      "end": 375.0,
+      "text": "You knew that was my can, Adam."
+    },
+    {
+      "start": 375.0,
+      "end": 378.0,
+      "text": "Who else would put a chute on it?"
+    },
+    {
+      "start": 378.0,
+      "end": 381.0,
+      "text": "Now, it seems you've got a problem."
+    },
+    {
+      "start": 381.0,
+      "end": 386.0,
+      "text": "You've got a family to feed and clothe and educate."
+    },
+    {
+      "start": 386.0,
+      "end": 388.0,
+      "text": "I worry for them."
+    },
+    {
+      "start": 388.0,
+      "end": 390.0,
+      "text": "I really do."
+    },
+    {
+      "start": 390.0,
+      "end": 392.0,
+      "text": "I can fix this."
+    },
+    {
+      "start": 392.0,
+      "end": 398.0,
+      "text": "All I ask for is the girl."
+    },
+    {
+      "start": 398.0,
+      "end": 402.0,
+      "text": "Did you think I wouldn't work it out?"
+    },
+    {
+      "start": 402.0,
+      "end": 405.0,
+      "text": "You can't hide her sex forever."
+    },
+    {
+      "start": 405.0,
+      "end": 408.0,
+      "text": "She's going to be worth a hell of a lot of money one day."
+    },
+    {
+      "start": 408.0,
+      "end": 410.0,
+      "text": "And you know that she'd be better off with me"
+    },
+    {
+      "start": 410.0,
+      "end": 414.0,
+      "text": "than if those men get their hands on her."
+    },
+    {
+      "start": 414.0,
+      "end": 418.0,
+      "text": "It's a fair deal."
+    },
+    {
+      "start": 418.0,
+      "end": 420.0,
+      "text": "I'll be back tomorrow."
+    },
+    {
+      "start": 430.0,
+      "end": 434.0,
+      "text": "Okay, that's right."
+    },
+    {
+      "start": 434.0,
+      "end": 436.0,
+      "text": "We're not giving up to Vanna."
+    },
+    {
+      "start": 436.0,
+      "end": 440.0,
+      "text": "No, we're not."
+    },
+    {
+      "start": 440.0,
+      "end": 443.0,
+      "text": "But I am fucking useless."
+    },
+    {
+      "start": 443.0,
+      "end": 449.0,
+      "text": "Simon, it's time to feed me to the wolves."
+    },
+    {
+      "start": 449.0,
+      "end": 452.0,
+      "text": "I'm getting to Vanna and we're going."
+    },
+    {
+      "start": 464.0,
+      "end": 466.0,
+      "text": "Shit."
+    },
+    {
+      "start": 494.0,
+      "end": 509.0,
+      "text": "What makes you think it's going to be any better up there?"
+    },
+    {
+      "start": 509.0,
+      "end": 512.0,
+      "text": "It has to be."
+    },
+    {
+      "start": 512.0,
+      "end": 514.0,
+      "text": "What do you know?"
+    },
+    {
+      "start": 514.0,
+      "end": 516.0,
+      "text": "She never came back."
+    },
+    {
+      "start": 516.0,
+      "end": 519.0,
+      "text": "Maybe she didn't want to see your ugly face every day."
+    },
+    {
+      "start": 519.0,
+      "end": 522.0,
+      "text": "We're going."
+    },
+    {
+      "start": 522.0,
+      "end": 525.0,
+      "text": "You're alone."
+    },
+    {
+      "start": 549.0,
+      "end": 551.0,
+      "text": "Look, I'll help you."
+    },
+    {
+      "start": 551.0,
+      "end": 556.0,
+      "text": "Give me your ID card and I'll say what I can do."
+    },
+    {
+      "start": 556.0,
+      "end": 558.0,
+      "text": "Okay."
+    },
+    {
+      "start": 558.0,
+      "end": 560.0,
+      "text": "Okay."
+    },
+    {
+      "start": 560.0,
+      "end": 562.0,
+      "text": "Okay."
+    },
+    {
+      "start": 562.0,
+      "end": 564.0,
+      "text": "Okay."
+    },
+    {
+      "start": 564.0,
+      "end": 566.0,
+      "text": "Okay."
+    },
+    {
+      "start": 566.0,
+      "end": 568.0,
+      "text": "Okay."
+    },
+    {
+      "start": 568.0,
+      "end": 570.0,
+      "text": "Okay."
+    },
+    {
+      "start": 570.0,
+      "end": 572.0,
+      "text": "Okay."
+    },
+    {
+      "start": 572.0,
+      "end": 574.0,
+      "text": "Okay."
+    },
+    {
+      "start": 574.0,
+      "end": 576.0,
+      "text": "Okay."
+    },
+    {
+      "start": 576.0,
+      "end": 578.0,
+      "text": "Okay."
+    },
+    {
+      "start": 582.0,
+      "end": 585.0,
+      "text": "Just stay in the fucking hood, okay?"
+    },
+    {
+      "start": 585.0,
+      "end": 587.0,
+      "text": "Okay."
+    },
+    {
+      "start": 599.0,
+      "end": 602.0,
+      "text": "What do you think you're going?"
+    },
+    {
+      "start": 606.0,
+      "end": 611.0,
+      "text": "Let's go for a walk."
+    },
+    {
+      "start": 611.0,
+      "end": 613.0,
+      "text": "Cool?"
+    },
+    {
+      "start": 613.0,
+      "end": 615.0,
+      "text": "Sure."
+    },
+    {
+      "start": 636.0,
+      "end": 638.0,
+      "text": "Okay."
+    },
+    {
+      "start": 666.0,
+      "end": 668.0,
+      "text": "Okay."
+    },
+    {
+      "start": 697.0,
+      "end": 699.0,
+      "text": "Ow!"
+    },
+    {
+      "start": 709.0,
+      "end": 712.0,
+      "text": "I'm here to ask for a new deal."
+    },
+    {
+      "start": 712.0,
+      "end": 716.0,
+      "text": "Hurting either one of us ain't going to save your family."
+    },
+    {
+      "start": 716.0,
+      "end": 719.0,
+      "text": "I think you know that already."
+    },
+    {
+      "start": 726.0,
+      "end": 728.0,
+      "text": "Okay."
+    },
+    {
+      "start": 744.0,
+      "end": 747.0,
+      "text": "Maybe you've got some smarts after all."
+    },
+    {
+      "start": 747.0,
+      "end": 749.0,
+      "text": "I want to vent on the first crawler."
+    },
+    {
+      "start": 749.0,
+      "end": 751.0,
+      "text": "Out of here, it's my warning."
+    },
+    {
+      "start": 751.0,
+      "end": 753.0,
+      "text": "In return, you'll get me."
+    },
+    {
+      "start": 753.0,
+      "end": 754.0,
+      "text": "I'm smart."
+    },
+    {
+      "start": 754.0,
+      "end": 756.0,
+      "text": "I'll work hard."
+    },
+    {
+      "start": 756.0,
+      "end": 758.0,
+      "text": "You have my word."
+    },
+    {
+      "start": 758.0,
+      "end": 760.0,
+      "text": "That isn't even a trade."
+    },
+    {
+      "start": 760.0,
+      "end": 763.0,
+      "text": "You're just not worth as much."
+    },
+    {
+      "start": 765.0,
+      "end": 768.0,
+      "text": "I've got one too many mouths to feed already."
+    },
+    {
+      "start": 768.0,
+      "end": 770.0,
+      "text": "Just the way it is."
+    },
+    {
+      "start": 770.0,
+      "end": 773.0,
+      "text": "I'll collect your sister in the morning."
+    },
+    {
+      "start": 778.0,
+      "end": 780.0,
+      "text": "What about my dad?"
+    },
+    {
+      "start": 780.0,
+      "end": 783.0,
+      "text": "What about him?"
+    },
+    {
+      "start": 783.0,
+      "end": 786.0,
+      "text": "How much would he be worth?"
+    },
+    {
+      "start": 786.0,
+      "end": 789.0,
+      "text": "He's a broken man. What do you mean?"
+    },
+    {
+      "start": 789.0,
+      "end": 791.0,
+      "text": "You know exactly what I mean."
+    },
+    {
+      "start": 791.0,
+      "end": 793.0,
+      "text": "You know exactly what I mean."
+    },
+    {
+      "start": 793.0,
+      "end": 795.0,
+      "text": "You know exactly what I mean."
+    },
+    {
+      "start": 795.0,
+      "end": 797.0,
+      "text": "You know exactly what I mean."
+    },
+    {
+      "start": 798.0,
+      "end": 801.0,
+      "text": "Some parts of him might be worth something to someone."
+    },
+    {
+      "start": 804.0,
+      "end": 806.0,
+      "text": "You need to be a fair trade."
+    },
+    {
+      "start": 806.0,
+      "end": 808.0,
+      "text": "You and him in exchange for the girl,"
+    },
+    {
+      "start": 808.0,
+      "end": 810.0,
+      "text": "is that what you're proposing?"
+    },
+    {
+      "start": 810.0,
+      "end": 812.0,
+      "text": "Yeah."
+    },
+    {
+      "start": 812.0,
+      "end": 814.0,
+      "text": "Yeah, I guess so."
+    },
+    {
+      "start": 814.0,
+      "end": 817.0,
+      "text": "It won't be painful."
+    },
+    {
+      "start": 817.0,
+      "end": 819.0,
+      "text": "You've got my word."
+    },
+    {
+      "start": 819.0,
+      "end": 821.0,
+      "text": "I'm not going to give up."
+    },
+    {
+      "start": 821.0,
+      "end": 823.0,
+      "text": "I'm not going to give up."
+    },
+    {
+      "start": 823.0,
+      "end": 825.0,
+      "text": "I'm not going to give up."
+    },
+    {
+      "start": 826.0,
+      "end": 828.0,
+      "text": "You've got my word."
+    },
+    {
+      "start": 830.0,
+      "end": 832.0,
+      "text": "How can I trust you?"
+    },
+    {
+      "start": 832.0,
+      "end": 834.0,
+      "text": "How can I trust you?"
+    },
+    {
+      "start": 855.0,
+      "end": 858.0,
+      "text": "How can I trust you?"
+    },
+    {
+      "start": 885.0,
+      "end": 887.0,
+      "text": "How can I trust you?"
+    },
+    {
+      "start": 887.0,
+      "end": 889.0,
+      "text": "How can I trust you?"
+    },
+    {
+      "start": 907.0,
+      "end": 909.0,
+      "text": "You could leave for Outlived."
+    },
+    {
+      "start": 912.0,
+      "end": 914.0,
+      "text": "Thank you!"
+    },
+    {
+      "start": 914.0,
+      "end": 916.0,
+      "text": "Alright. Thank Dad."
+    },
+    {
+      "start": 916.0,
+      "end": 918.0,
+      "text": "Well, can I?"
+    },
+    {
+      "start": 918.0,
+      "end": 920.0,
+      "text": "Come on, let's go."
+    },
+    {
+      "start": 920.0,
+      "end": 922.0,
+      "text": "You can't. It's just how it is."
+    },
+    {
+      "start": 922.0,
+      "end": 924.0,
+      "text": "Why?"
+    },
+    {
+      "start": 924.0,
+      "end": 926.0,
+      "text": "Why?"
+    },
+    {
+      "start": 926.0,
+      "end": 928.0,
+      "text": "He's in the operation, okay?"
+    },
+    {
+      "start": 928.0,
+      "end": 930.0,
+      "text": "Come on, we better go."
+    },
+    {
+      "start": 930.0,
+      "end": 932.0,
+      "text": "I don't want to be late to the call."
+    },
+    {
+      "start": 944.0,
+      "end": 946.0,
+      "text": "Pass cards."
+    },
+    {
+      "start": 946.0,
+      "end": 948.0,
+      "text": "Step back."
+    },
+    {
+      "start": 952.0,
+      "end": 954.0,
+      "text": "Continue on."
+    },
+    {
+      "start": 964.0,
+      "end": 966.0,
+      "text": "Keep going."
+    },
+    {
+      "start": 966.0,
+      "end": 968.0,
+      "text": "Keep going."
+    },
+    {
+      "start": 996.0,
+      "end": 998.0,
+      "text": "Keep going."
+    }
+  ],
+  "full_text": "We've entered the stratosphere in a commencing final descent over. We've entered the stratosphere in a commencing final descent over. We've entered the stratosphere in a commencing final descent over. Ten, nine, eight, seven, six, five, four, three, two, one, zero. Told you I could do it. I never doubted you. Bullshit. Language, Simon, language. Come on, Dave, get your ass moving, yellow. We're in real luck. It's a Clarkstown cap. If you cap here and here, we'll get in real quick. Shit. Go. Get your dad out of here. Go. Well, well, well. Three counter boys. What'll be peddling this evening? Just got to get my dad to the medic. Anything to declare? No, sir. Please, can I get my dad? What's that? All right, let's have your ID sent. Here's your day passes. Welcome to Clarkstown. You wanted to know if Adam Carter came in? Yeah, he's here now. Check him in. I'll deal with it. Where are the other girls, honey? Girls. This isn't the deal. Get over here. I've got a whole lot of hungry men here and she ain't going to feed them all. So I'm going to take something from you and make it fair on me. Guys, take two tonne off this can before we load it back on tomorrow's crawler. Fuck sakes. Fuck sakes. You better make sure I get what I paid for. Or I'm going to stick you in a dress and a wig and put you in a small dark room with these animals. Got it? So, Officer Henshaw, what seems to be the problem? I'm pretty sure we need that carbon fibre up at the space dock. Sir, it seems Manny here had a stall way. And what has that got to do with the carbon force? Sir, we're taking her in for questioning. Perhaps you'd like to question the prisoner yourself, sir? Yes, sir. Adam, you might want to ask your boys to leave. You knew that was my can, Adam. Who else would put a chute on it? Now, it seems you've got a problem. You've got a family to feed and clothe and educate. I worry for them. I really do. I can fix this. All I ask for is the girl. Did you think I wouldn't work it out? You can't hide her sex forever. She's going to be worth a hell of a lot of money one day. And you know that she'd be better off with me than if those men get their hands on her. It's a fair deal. I'll be back tomorrow. Okay, that's right. We're not giving up to Vanna. No, we're not. But I am fucking useless. Simon, it's time to feed me to the wolves. I'm getting to Vanna and we're going. Shit. What makes you think it's going to be any better up there? It has to be. What do you know? She never came back. Maybe she didn't want to see your ugly face every day. We're going. You're alone. Look, I'll help you. Give me your ID card and I'll say what I can do. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Okay. Just stay in the fucking hood, okay? Okay. What do you think you're going? Let's go for a walk. Cool? Sure. Okay. Okay. Ow! I'm here to ask for a new deal. Hurting either one of us ain't going to save your family. I think you know that already. Okay. Maybe you've got some smarts after all. I want to vent on the first crawler. Out of here, it's my warning. In return, you'll get me. I'm smart. I'll work hard. You have my word. That isn't even a trade. You're just not worth as much. I've got one too many mouths to feed already. Just the way it is. I'll collect your sister in the morning. What about my dad? What about him? How much would he be worth? He's a broken man. What do you mean? You know exactly what I mean. You know exactly what I mean. You know exactly what I mean. You know exactly what I mean. Some parts of him might be worth something to someone. You need to be a fair trade. You and him in exchange for the girl, is that what you're proposing? Yeah. Yeah, I guess so. It won't be painful. You've got my word. I'm not going to give up. I'm not going to give up. I'm not going to give up. You've got my word. How can I trust you? How can I trust you? How can I trust you? How can I trust you? How can I trust you? You could leave for Outlived. Thank you! Alright. Thank Dad. Well, can I? Come on, let's go. You can't. It's just how it is. Why? Why? He's in the operation, okay? Come on, we better go. I don't want to be late to the call. Pass cards. Step back. Continue on. Keep going. Keep going. Keep going."
+}
