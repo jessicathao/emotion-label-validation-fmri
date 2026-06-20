@@ -246,3 +246,11 @@ data/transcripts/*_gemini-pro_cache.jsonl
 secrets.*
 data/transcripts/*_gemini_context_cache.jsonl
 data/decode_cache/*.npz
+
+
+# deck tooling and render byproducts (repo root only; keep figures/*.pdf tracked)
+/node_modules/
+/*.pdf
+/*.pptx
+/slide-*.jpg
+/slide-*.jpeg
