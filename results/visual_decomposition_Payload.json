@@ -1,0 +1,163 @@
+{
+  "film": "Payload",
+  "subjects": [
+    "sub-S08",
+    "sub-S05",
+    "sub-S11",
+    "sub-S15",
+    "sub-S06"
+  ],
+  "n_volumes_total": 3873,
+  "alpha": 10000.0,
+  "roi": "posterior occipital (y < -60 mm)",
+  "positive_control_pooled": {
+    "timescales_s": [
+      250,
+      150,
+      100,
+      60,
+      30
+    ],
+    "recovery_r_snr1": [
+      0.3257520015147394,
+      0.28112632458162196,
+      0.2755466453561898,
+      0.3021251415407016,
+      0.3190100415548218
+    ],
+    "recovery_r_snr0_3": [
+      0.08950022197281078,
+      0.08148848897464397,
+      0.07378473312648468,
+      0.10884897794745758,
+      0.10663844632379724
+    ],
+    "valence_timescale_s": 100
+  },
+  "targets": {
+    "valence": {
+      "loso_r_per_subject": [
+        0.079,
+        -0.104,
+        0.177,
+        0.021,
+        0.008
+      ],
+      "loso_mean": 0.036,
+      "shift_null_mean": 0.045,
+      "shift_null_sd": 0.014,
+      "beats_null": -0.008,
+      "verdict": "null"
+    },
+    "luminance": {
+      "loso_r_per_subject": [
+        0.066,
+        0.09,
+        0.068,
+        0.129,
+        0.054
+      ],
+      "loso_mean": 0.081,
+      "shift_null_mean": 0.061,
+      "shift_null_sd": 0.036,
+      "beats_null": 0.021,
+      "verdict": "null"
+    },
+    "rms_contrast": {
+      "loso_r_per_subject": [
+        0.061,
+        0.076,
+        0.083,
+        0.107,
+        0.068
+      ],
+      "loso_mean": 0.079,
+      "shift_null_mean": 0.064,
+      "shift_null_sd": 0.051,
+      "beats_null": 0.015,
+      "verdict": "null"
+    },
+    "motion": {
+      "loso_r_per_subject": [
+        0.179,
+        0.219,
+        0.208,
+        0.274,
+        0.253
+      ],
+      "loso_mean": 0.227,
+      "shift_null_mean": 0.094,
+      "shift_null_sd": 0.027,
+      "beats_null": 0.132,
+      "verdict": "decodes"
+    },
+    "edges": {
+      "loso_r_per_subject": [
+        0.107,
+        0.066,
+        0.086,
+        0.155,
+        0.128
+      ],
+      "loso_mean": 0.108,
+      "shift_null_mean": 0.065,
+      "shift_null_sd": 0.02,
+      "beats_null": 0.044,
+      "verdict": "decodes"
+    },
+    "cuts": {
+      "loso_r_per_subject": [
+        0.094,
+        0.062,
+        0.143,
+        0.099,
+        0.19
+      ],
+      "loso_mean": 0.117,
+      "shift_null_mean": 0.067,
+      "shift_null_sd": 0.026,
+      "beats_null": 0.05,
+      "verdict": "decodes"
+    },
+    "saturation": {
+      "loso_r_per_subject": [
+        -0.039,
+        0.185,
+        0.055,
+        -0.024,
+        -0.057
+      ],
+      "loso_mean": 0.024,
+      "shift_null_mean": 0.08,
+      "shift_null_sd": 0.05,
+      "beats_null": -0.056,
+      "verdict": "null"
+    },
+    "valence_resid_visual": {
+      "loso_r_per_subject": [
+        0.117,
+        -0.041,
+        0.192,
+        0.048,
+        0.024
+      ],
+      "loso_mean": 0.068,
+      "shift_null_mean": 0.045,
+      "shift_null_sd": 0.015,
+      "beats_null": 0.023,
+      "verdict": "decodes"
+    }
+  },
+  "stimulus_side": {
+    "visual_set_R2_predicting_valence": 0.056,
+    "feature_corr_with_valence_1hz": {
+      "luminance": 0.099,
+      "rms_contrast": 0.128,
+      "motion": 0.208,
+      "edges": 0.124,
+      "cuts": -0.027,
+      "saturation": -0.034
+    }
+  },
+  "note": "Real-feature positive control: occipital should decode visual features (beats their own elevated nulls) while valence does not. valence_resid_visual tests whether any occipital valence survives removing the visual confound. Effect sizes only; each target judged against its own shift-null, never zero."
+}
