@@ -1,7 +1,3 @@
-Analysis,Target,n volumes,predicted-vs-true r,Note
-Human PoC (alpha=100),PleasantOther,451,+0.160,"modest, stable"
-Human PoC (alpha=1000),PleasantOther,451,+0.178,"modest, stable"
-Human PoC (alpha=10000),PleasantOther,451,+0.208,best/most-regularized
-Fair comparison,PleasantOther,70,+0.036,underpowered (n too small)
-Fair comparison,Gemini-context,70,-0.359,underpowered (n too small)
-Label-vs-label sanity,human vs gemini,70,+0.632,consistent w/ validated +0.60
+film,character,n_subjects,n_volumes_total,positive_control_r_100s_snr1,real_loso_r,shift_null_mean,shift_null_sd,verdict,note
+Payload,dialogue-dense,5,3873,+0.276,+0.033,+0.044,0.013,null (real below its own shift-null),"real decode at chance; planted-signal positive control passes, so the estimator is valid"
+TearsOfSteel,dialogue-light / visually intense,5,2257,+0.249,+0.089,+0.127,0.042,null (real below its own shift-null),"real decode at chance; chance level elevated (~+0.13) because occipital BOLD is visually structured, so a test against zero would false-positive; the shift-null catches it"
