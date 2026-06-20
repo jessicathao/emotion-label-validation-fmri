@@ -21,10 +21,12 @@ annotation?**
    per-segment classifier (BERT) and an LLM (Gemini 3.5 Flash)
    across 12 films, with three sentiment models on the cleanest film, plus a
    preliminary dialogue-context manipulation on four films.
-2. **Brain decoding (proof-of-concept):** Can those labels decode emotional
-   valence from the fMRI BOLD signal? A single-subject occipital decode has been
-   run as a proof-of-concept; the powered human-versus-automatic comparison is
-   the next step.
+2. **Brain decoding (controlled null):** Can those labels decode emotional
+   valence from the fMRI BOLD signal? A powered, multi-subject occipital decode has been
+   run on two films. It does not recover human valence above chance, and
+   a planted-signal positive control confirms the estimator would have detected a
+   signal if one were present, so the result is a controlled null, not a missing
+   measurement.
 
 ## Findings so far
 
@@ -49,10 +51,22 @@ only weakly, and only where emotion is carried in explicit dialogue:
   r ≈ 0.58 (the highest-agreement item), dataset-mean r ≈ 0.39. The 0.58 is pairwise
   inter-rater, a noisier yardstick than the averaged consensus the models are scored
   against, so the context result is "consensus-level on one film," not "beating humans."
-- **Brain decoding (proof-of-concept):** human valence decodes from one subject's
-  occipital BOLD (r ≈ 0.21), a valence-correlated visual signal. The fair
-  human-versus-automatic comparison is underpowered, so nothing is claimed from it; the
-  result is that the label and neural arms hit the same dialogue-density limit.
+- **Brain decoding (controlled null, two films):** a powered leave-one-subject-out
+  decode of human PleasantOther valence from posterior occipital BOLD reads at chance
+  on both a dialogue-dense film (Payload: real r = +0.033 vs a shift-null of
+  +0.044 ± 0.013) and a dialogue-light one (Tears of Steel: real r = +0.089 vs a
+  shift-null of +0.127 ± 0.042). A planted-signal positive control passes on both
+  films (recovery r = +0.276 and +0.249 at the valence timescale), so the estimator
+  can detect a signal it should detect; the real valence signal is simply not there.
+  The earlier single-subject r ≈ 0.21 is retracted: it came from the highest-motion
+  run in the dataset and reverses in sign (−0.16) on the cleanest subject of the same
+  film. The elevated Tears of Steel chance level (≈ +0.13) is itself a finding:
+  occipital BOLD is so visually structured that a naive test against zero would have
+  called the real +0.089 a hit, which is why the decode is scored against a shift-null,
+  not zero. Scope is bounded to one ROI (posterior occipital) and one target
+  (PleasantOther); this is not a claim that the brain lacks valence information. The
+  label and neural arms converge on the same ~80 to 110 s annotation-autocorrelation
+  limit, reached here from the neural side.
 
 Conclusion: text-based sentiment, even with a frontier LLM, is not yet a robust
 substitute for human emotion annotation in naturalistic film. It tracks human valence
@@ -94,9 +108,10 @@ Film dialogue        per-segment              valence (1 Hz)
                                               real-timeline
                                               block-bootstrap CI
                                                                  │
-                                   (proof-of-concept) ────────────┘
-                              decode valence from BOLD (leave-one-block-out,
-                              contiguous CV), comparing human vs automatic labels
+                                   (controlled null) ─────────────┘
+                              decode valence from BOLD (leave-one-subject-out,
+                              5 subjects/film, planted-signal positive control
+                              + circular-shift null), two films
 ```
 
 Each dialogue segment is scored **on its own** (without the surrounding dialogue
@@ -110,6 +125,12 @@ the values reported in Morgenroth et al. 2025 (the per-rater series are not in t
 derivatives, so they are cited from the paper, not recomputed here). A contamination check
 removes non-dialogue audio (songs, recited verse, credit tails) that Whisper transcribes and
 sentiment models then mis-score; on Spaceman this collapses BERT's phantom negative toward zero.
+
+For the brain arm, valence is decoded from posterior occipital BOLD with ridge
+regression under leave-one-subject-out cross-validation across five subjects per film;
+a planted-signal positive control verifies the estimator recovers a known signal at the
+valence timescale, and a circular-shift null sets the chance level. Reported on two
+films (Payload and Tears of Steel).
 
 ## Technical stack
 
@@ -154,10 +175,11 @@ Large/private data (brain images, film media) and resume caches are gitignored.
 - [x] Model-strength check (Gemini 3.1 Pro) confirming the sparse-dialogue null
 - [x] Result figures (forest plot vs the inter-rater reference; decontamination mechanism)
 - [x] Context condition (dialogue-context window), preliminary, four films
-- [x] Brain decoding, single-subject occipital proof-of-concept run
-- [ ] Powered, multi-subject human vs automatic decode on a dialogue-dense film
+- [x] Brain decoding, single-subject occipital run (superseded; retracted as a result)
+- [x] Powered, multi-subject leave-one-subject-out decode on two films (Payload, Tears
+      of Steel), with a planted-signal positive control: a controlled null
 - [ ] Run the context condition on BERT too, for a symmetric context comparison
-- [ ] Singapore symposium presentation (June 2026)
+- [ ] Singapore symposium presentation (July 2026)
 
 ## Background
 Builds on Brainhack School 2026 (NTU Taiwan): fMRI decoding with SVM (Haxby,
