@@ -18,14 +18,14 @@ The central question: can an automatic NLP method label the emotional valence of
 
 ## Findings so far
 
-Preliminary (Brainhack School 2026). Full quantitative results are reserved for a manuscript in preparation; this is a qualitative summary.
+Preliminary (Brainhack School 2026), reported qualitatively; quantitative results are reserved for a manuscript in preparation.
 
-- **Automatic labels track human valence only where emotion is spoken.** Per-segment BERT largely fails, reaching meaningful agreement on only the most lexically explicit film; its other correlations are small and directionless, and its one apparent significant negative (Spaceman) traces to a transcription artifact (song lyrics and credits mis-scored as dialogue, caught by a contamination check). A stronger model (Gemini 3.5 Flash) on the same isolated segments is somewhat more consistent and removes BERT's spurious negatives, but the gains are modest and absent on sparse-dialogue films.
-- **Dialogue context helps the model that can use it.** A preliminary context condition was run on four films for both models. It raises Gemini's agreement on dialogue-driven films and stays flat on a dialogue-light one, a principled null; the identical condition produces no coherent effect for per-segment BERT, and its one apparent rise is shown by a direct control to be smoothing, not comprehension.
-- **The brain arm is a controlled, mechanistic null.** A powered leave-one-subject-out decode of human valence from posterior occipital BOLD reads at chance on two films, while a planted-signal positive control confirms the estimator would have detected a real signal. The same decoder, run on the film's visual features, recovers the visual dynamics (motion most strongly) but not valence, so the occipital signal is visual, not affective. Scope is bounded to one ROI and one target; this is not a claim that the brain lacks valence information.
-- **Reporting standard.** Findings are reported as effect sizes with cross-model and cross-film replication, not p-values: the emotion annotations are strongly autocorrelated, which makes significance testing on single short films unreliable.
+- **Automatic labels track human valence only where emotion is spoken.** Per-segment BERT agrees with human ratings on only the most lexically explicit film; an LLM (Gemini 3.5 Flash) is somewhat more consistent but its gains are modest, and absent on sparse-dialogue films.
+- **Dialogue context helps the model that can use it.** In a preliminary four-film condition, context raises LLM agreement on dialogue-driven films but produces no coherent effect for per-segment BERT.
+- **The brain arm is a controlled, mechanistic null.** Decoding human valence from posterior occipital BOLD reads at chance on two films; the same region tracks low-level visual features of the film, not valence. Bounded to one ROI and one target, this is not a claim that the brain lacks valence information.
+- **Reporting standard.** Results are reported as effect sizes with cross-model and cross-film replication rather than p-values, because the emotion annotations are strongly autocorrelated.
 
-**Conclusion:** text-based sentiment, even with a frontier LLM, is not yet a robust substitute for human emotion annotation in naturalistic film. It tracks human valence substantially only where emotion is stated in the words, and the label and neural arms converge on the same boundary from two independent directions.
+**Conclusion:** text-based sentiment, even with a frontier LLM, is not yet a robust substitute for human emotion annotation in naturalistic film; the label and neural arms reach the same boundary from two directions.
 
 ## Why it matters
 
