@@ -29,6 +29,10 @@ img{max-width:100%}
 .block.dark{background:linear-gradient(160deg,#16485b 0%,var(--navy) 55%,var(--navy2) 100%);color:#fff}
 .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
 
+/* film-strip divider (film theme) — frames the content like a reel */
+.filmstrip{height:22px;background-color:#0d2c38;background-repeat:repeat-x;background-position:center;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='34'%20height='22'%3E%3Crect%20x='9'%20y='6'%20width='16'%20height='10'%20rx='3'%20fill='%231f5266'/%3E%3C/svg%3E")}
+
 /* big section-number header (visual anchor) */
 .shead{display:flex;align-items:baseline;gap:14px;margin-bottom:4px}
 .snum{font-family:ui-monospace,Menlo,monospace;font-size:clamp(30px,4.4vw,52px);font-weight:850;
