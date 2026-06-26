@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emo-FilM · Can a machine read how a film makes you feel?</title>
+<meta name="description" content="Testing transformer emotion labels and brain decoding against human feeling in naturalistic-film fMRI. Le Thi Thach Thao (Jessica), National Taiwan University.">
+<meta name="theme-color" content="#123a49">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+  <svg class="motif" viewBox="0 0 660 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g class="ecg s2"><path fill="none" stroke="#5fb3cf" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".85" d="M-5.0,130.1 L-1.0,131.5 L3.0,132.6 L7.0,133.4 L11.0,134.0 L15.0,134.4 L19.0,134.6 L23.0,134.7 L27.0,134.7 L31.0,134.6 L35.0,134.6 L39.0,134.6 L43.0,134.6 L47.0,134.7 L51.0,134.8 L55.0,135.0 L59.0,135.2 L63.0,135.3 L67.0,135.4 L71.0,135.3 L75.0,135.2 L79.0,134.8 L83.0,134.3 L87.0,133.6 L91.0,132.7 L95.0,131.7 L99.0,130.5 L103.0,129.2 L107.0,128.0 L111.0,126.7 L115.0,125.6 L119.0,124.6 L123.0,123.8 L127.0,123.2 L131.0,123.0 L135.0,123.0 L139.0,123.3 L143.0,124.0 L147.0,124.8 L151.0,125.8 L155.0,127.0 L159.0,128.2 L163.0,129.5 L167.0,130.6 L171.0,131.5 L175.0,131.9 L179.0,131.3 L183.0,128.8 L187.0,123.9 L191.0,117.4 L195.0,111.8 L199.0,109.8 L203.0,112.3 L207.0,117.2 L211.0,121.8 L215.0,124.5 L219.0,125.3 L223.0,125.0 L227.0,124.4 L231.0,123.8 L235.0,123.4 L239.0,123.2 L243.0,123.1 L247.0,123.3 L251.0,123.5 L255.0,123.9 L259.0,124.2 L263.0,124.6 L267.0,125.0 L271.0,125.3 L275.0,125.4 L279.0,125.5 L283.0,125.5 L287.0,125.4 L291.0,125.1 L295.0,124.9 L299.0,124.7 L303.0,124.4 L307.0,124.3 L311.0,124.3 L315.0,124.4 L319.0,124.7 L323.0,125.2 L327.0,125.8 L331.0,126.5 L335.0,127.4 L339.0,128.3 L343.0,129.2 L347.0,130.0 L351.0,130.6 L355.0,131.1 L359.0,131.3 L363.0,131.2 L367.0,130.7 L371.0,129.9 L375.0,128.8 L379.0,127.3 L383.0,125.5 L387.0,123.4 L391.0,121.2 L395.0,118.8 L399.0,116.4 L403.0,114.0 L407.0,111.8 L411.0,109.7 L415.0,107.8 L419.0,106.2 L423.0,104.9 L427.0,103.8 L431.0,103.1 L435.0,102.6 L439.0,102.3 L443.0,102.1 L447.0,102.0 L451.0,101.8 L455.0,101.0 L459.0,98.8 L463.0,94.5 L467.0,88.4 L471.0,82.5 L475.0,79.6 L479.0,81.3 L483.0,86.5 L487.0,92.1 L491.0,96.2 L495.0,98.2 L499.0,98.9 L503.0,99.1 L507.0,99.3 L511.0,99.5 L515.0,99.9 L519.0,100.5 L523.0,101.2 L527.0,102.1 L531.0,103.0 L535.0,103.9 L539.0,104.8 L543.0,105.6 L547.0,106.2 L551.0,106.7 L555.0,107.0 L559.0,107.2 L563.0,107.1 L567.0,106.8 L571.0,106.4 L575.0,105.9 L579.0,105.4 L583.0,104.9 L587.0,104.5 L591.0,104.2 L595.0,104.2 L599.0,104.5 L603.0,105.1 L607.0,106.0 L611.0,107.2 L615.0,108.8 L619.0,110.6 L623.0,112.7 L627.0,114.9 L631.0,117.3 L635.0,119.7 L639.0,122.1 L643.0,124.4 L647.0,126.5 L651.0,128.5 L655.0,130.1 L659.0,131.5 L663.0,132.6 L667.0,133.4 L671.0,134.0 L675.0,134.4 L679.0,134.6 L683.0,134.7 L687.0,134.7 L691.0,134.6 L695.0,134.6 L699.0,134.6 L703.0,134.6 L707.0,134.7 L711.0,134.8 L715.0,135.0 L719.0,135.2 L723.0,135.3 L727.0,135.4 L731.0,135.3 L735.0,135.2 L739.0,134.8 L743.0,134.3 L747.0,133.6 L751.0,132.7 L755.0,131.7 L759.0,130.5 L763.0,129.2 L767.0,128.0 L771.0,126.7 L775.0,125.6 L779.0,124.6 L783.0,123.8 L787.0,123.2 L791.0,123.0 L795.0,123.0 L799.0,123.3 L803.0,124.0 L807.0,124.8 L811.0,125.8 L815.0,127.0 L819.0,128.2 L823.0,129.5 L827.0,130.6 L831.0,131.5 L835.0,131.9 L839.0,131.3 L843.0,128.8 L847.0,123.9 L851.0,117.4 L855.0,111.8 L859.0,109.8 L863.0,112.3 L867.0,117.2 L871.0,121.8 L875.0,124.5 L879.0,125.3 L883.0,125.0 L887.0,124.4 L891.0,123.8 L895.0,123.4 L899.0,123.2 L903.0,123.1 L907.0,123.3 L911.0,123.5 L915.0,123.9 L919.0,124.2 L923.0,124.6 L927.0,125.0 L931.0,125.3 L935.0,125.4 L939.0,125.5 L943.0,125.5 L947.0,125.4 L951.0,125.1 L955.0,124.9 L959.0,124.7 L963.0,124.4 L967.0,124.3 L971.0,124.3 L975.0,124.4 L979.0,124.7 L983.0,125.2 L987.0,125.8 L991.0,126.5 L995.0,127.4 L999.0,128.3 L1003.0,129.2 L1007.0,130.0 L1011.0,130.6 L1015.0,131.1 L1019.0,131.3 L1023.0,131.2 L1027.0,130.7 L1031.0,129.9 L1035.0,128.8 L1039.0,127.3 L1043.0,125.5 L1047.0,123.4 L1051.0,121.2 L1055.0,118.8 L1059.0,116.4 L1063.0,114.0 L1067.0,111.8 L1071.0,109.7 L1075.0,107.8 L1079.0,106.2 L1083.0,104.9 L1087.0,103.8 L1091.0,103.1 L1095.0,102.6 L1099.0,102.3 L1103.0,102.1 L1107.0,102.0 L1111.0,101.8 L1115.0,101.0 L1119.0,98.8 L1123.0,94.5 L1127.0,88.4 L1131.0,82.5 L1135.0,79.6 L1139.0,81.3 L1143.0,86.5 L1147.0,92.1 L1151.0,96.2 L1155.0,98.2 L1159.0,98.9 L1163.0,99.1 L1167.0,99.3 L1171.0,99.5 L1175.0,99.9 L1179.0,100.5 L1183.0,101.2 L1187.0,102.1 L1191.0,103.0 L1195.0,103.9 L1199.0,104.8 L1203.0,105.6 L1207.0,106.2 L1211.0,106.7 L1215.0,107.0 L1219.0,107.2 L1223.0,107.1 L1227.0,106.8 L1231.0,106.4 L1235.0,105.9 L1239.0,105.4 L1243.0,104.9 L1247.0,104.5 L1251.0,104.2 L1255.0,104.2 L1259.0,104.5 L1263.0,105.1 L1267.0,106.0 L1271.0,107.2 L1275.0,108.8 L1279.0,110.6 L1283.0,112.7 L1287.0,114.9 L1291.0,117.3 L1295.0,119.7 L1299.0,122.1 L1303.0,124.4 L1307.0,126.5 L1311.0,128.5 L1315.0,130.1 L1319.0,131.5 L1323.0,132.6 L1327.0,133.4"/></g>
+    <g class="ecg s1"><path fill="none" stroke="#c9a227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M-5.0,252.0 L-3.0,252.0 L-1.0,252.0 L1.0,252.0 L3.0,252.0 L5.0,252.0 L7.0,251.9 L9.0,251.8 L11.0,251.3 L13.0,250.3 L15.0,248.5 L17.0,246.5 L19.0,245.1 L21.0,245.3 L23.0,246.9 L25.0,248.9 L27.0,250.5 L29.0,251.4 L31.0,251.8 L33.0,252.0 L35.0,252.0 L37.0,252.1 L39.0,254.7 L41.0,261.8 L43.0,257.1 L45.0,272.4 L47.0,322.0 L49.0,272.4 L51.0,243.9 L53.0,236.1 L55.0,245.5 L57.0,251.4 L59.0,252.0 L61.0,252.0 L63.0,252.0 L65.0,252.0 L67.0,252.0 L69.0,252.0 L71.0,252.1 L73.0,252.2 L75.0,252.4 L77.0,253.0 L79.0,254.1 L81.0,256.0 L83.0,258.6 L85.0,261.8 L87.0,265.0 L89.0,267.3 L91.0,268.0 L93.0,266.9 L95.0,264.3 L97.0,261.0 L99.0,257.9 L101.0,255.4 L103.0,253.8 L105.0,252.8 L107.0,252.3 L109.0,252.1 L111.0,252.0 L113.0,252.0 L115.0,252.0 L117.0,252.0 L119.0,252.0 L121.0,252.0 L123.0,252.0 L125.0,252.0 L127.0,252.0 L129.0,252.0 L131.0,252.0 L133.0,252.0 L135.0,252.0 L137.0,252.0 L139.0,252.0 L141.0,252.0 L143.0,252.0 L145.0,252.0 L147.0,252.0 L149.0,252.0 L151.0,252.0 L153.0,252.0 L155.0,252.0 L157.0,252.0 L159.0,252.0 L161.0,252.0 L163.0,252.0 L165.0,252.0 L167.0,252.0 L169.0,252.0 L171.0,252.0 L173.0,251.9 L175.0,251.6 L177.0,250.9 L179.0,249.4 L181.0,247.5 L183.0,245.6 L185.0,245.0 L187.0,245.9 L189.0,247.9 L191.0,249.8 L193.0,251.1 L195.0,251.7 L197.0,251.9 L199.0,252.0 L201.0,252.0 L203.0,252.7 L205.0,258.7 L207.0,260.7 L209.0,257.8 L211.0,302.9 L213.0,304.2 L215.0,253.1 L217.0,237.8 L219.0,239.8 L221.0,249.7 L223.0,251.9 L225.0,252.0 L227.0,252.0 L229.0,252.0 L231.0,252.0 L233.0,252.0 L235.0,252.0 L237.0,252.1 L239.0,252.3 L241.0,252.7 L243.0,253.5 L245.0,254.9 L247.0,257.2 L249.0,260.2 L251.0,263.5 L253.0,266.3 L255.0,267.9 L257.0,267.6 L259.0,265.7 L261.0,262.7 L263.0,259.4 L265.0,256.6 L267.0,254.5 L269.0,253.2 L271.0,252.5 L273.0,252.2 L275.0,252.1 L277.0,252.0 L279.0,252.0 L281.0,252.0 L283.0,252.0 L285.0,252.0 L287.0,252.0 L289.0,252.0 L291.0,252.0 L293.0,252.0 L295.0,252.0 L297.0,252.0 L299.0,252.0 L301.0,252.0 L303.0,252.0 L305.0,252.0 L307.0,252.0 L309.0,252.0 L311.0,252.0 L313.0,252.0 L315.0,252.0 L317.0,252.0 L319.0,252.0 L321.0,252.0 L323.0,252.0 L325.0,252.0 L327.0,252.0 L329.0,252.0 L331.0,252.0 L333.0,252.0 L335.0,252.0 L337.0,251.9 L339.0,251.8 L341.0,251.3 L343.0,250.3 L345.0,248.5 L347.0,246.5 L349.0,245.1 L351.0,245.3 L353.0,246.9 L355.0,248.9 L357.0,250.5 L359.0,251.4 L361.0,251.8 L363.0,252.0 L365.0,252.0 L367.0,252.1 L369.0,254.7 L371.0,261.8 L373.0,257.1 L375.0,272.4 L377.0,322.0 L379.0,272.4 L381.0,243.9 L383.0,236.1 L385.0,245.5 L387.0,251.4 L389.0,252.0 L391.0,252.0 L393.0,252.0 L395.0,252.0 L397.0,252.0 L399.0,252.0 L401.0,252.1 L403.0,252.2 L405.0,252.4 L407.0,253.0 L409.0,254.1 L411.0,256.0 L413.0,258.6 L415.0,261.8 L417.0,265.0 L419.0,267.3 L421.0,268.0 L423.0,266.9 L425.0,264.3 L427.0,261.0 L429.0,257.9 L431.0,255.4 L433.0,253.8 L435.0,252.8 L437.0,252.3 L439.0,252.1 L441.0,252.0 L443.0,252.0 L445.0,252.0 L447.0,252.0 L449.0,252.0 L451.0,252.0 L453.0,252.0 L455.0,252.0 L457.0,252.0 L459.0,252.0 L461.0,252.0 L463.0,252.0 L465.0,252.0 L467.0,252.0 L469.0,252.0 L471.0,252.0 L473.0,252.0 L475.0,252.0 L477.0,252.0 L479.0,252.0 L481.0,252.0 L483.0,252.0 L485.0,252.0 L487.0,252.0 L489.0,252.0 L491.0,252.0 L493.0,252.0 L495.0,252.0 L497.0,252.0 L499.0,252.0 L501.0,252.0 L503.0,251.9 L505.0,251.6 L507.0,250.9 L509.0,249.4 L511.0,247.5 L513.0,245.6 L515.0,245.0 L517.0,245.9 L519.0,247.9 L521.0,249.8 L523.0,251.1 L525.0,251.7 L527.0,251.9 L529.0,252.0 L531.0,252.0 L533.0,252.7 L535.0,258.7 L537.0,260.7 L539.0,257.8 L541.0,302.9 L543.0,304.2 L545.0,253.1 L547.0,237.8 L549.0,239.8 L551.0,249.7 L553.0,251.9 L555.0,252.0 L557.0,252.0 L559.0,252.0 L561.0,252.0 L563.0,252.0 L565.0,252.0 L567.0,252.1 L569.0,252.3 L571.0,252.7 L573.0,253.5 L575.0,254.9 L577.0,257.2 L579.0,260.2 L581.0,263.5 L583.0,266.3 L585.0,267.9 L587.0,267.6 L589.0,265.7 L591.0,262.7 L593.0,259.4 L595.0,256.6 L597.0,254.5 L599.0,253.2 L601.0,252.5 L603.0,252.2 L605.0,252.1 L607.0,252.0 L609.0,252.0 L611.0,252.0 L613.0,252.0 L615.0,252.0 L617.0,252.0 L619.0,252.0 L621.0,252.0 L623.0,252.0 L625.0,252.0 L627.0,252.0 L629.0,252.0 L631.0,252.0 L633.0,252.0 L635.0,252.0 L637.0,252.0 L639.0,252.0 L641.0,252.0 L643.0,252.0 L645.0,252.0 L647.0,252.0 L649.0,252.0 L651.0,252.0 L653.0,252.0 L655.0,252.0 L657.0,252.0 L659.0,252.0 L661.0,252.0 L663.0,252.0 L665.0,252.0 L667.0,251.9 L669.0,251.8 L671.0,251.3 L673.0,250.3 L675.0,248.5 L677.0,246.5 L679.0,245.1 L681.0,245.3 L683.0,246.9 L685.0,248.9 L687.0,250.5 L689.0,251.4 L691.0,251.8 L693.0,252.0 L695.0,252.0 L697.0,252.1 L699.0,254.7 L701.0,261.8 L703.0,257.1 L705.0,272.4 L707.0,322.0 L709.0,272.4 L711.0,243.9 L713.0,236.1 L715.0,245.5 L717.0,251.4 L719.0,252.0 L721.0,252.0 L723.0,252.0 L725.0,252.0 L727.0,252.0 L729.0,252.0 L731.0,252.1 L733.0,252.2 L735.0,252.4 L737.0,253.0 L739.0,254.1 L741.0,256.0 L743.0,258.6 L745.0,261.8 L747.0,265.0 L749.0,267.3 L751.0,268.0 L753.0,266.9 L755.0,264.3 L757.0,261.0 L759.0,257.9 L761.0,255.4 L763.0,253.8 L765.0,252.8 L767.0,252.3 L769.0,252.1 L771.0,252.0 L773.0,252.0 L775.0,252.0 L777.0,252.0 L779.0,252.0 L781.0,252.0 L783.0,252.0 L785.0,252.0 L787.0,252.0 L789.0,252.0 L791.0,252.0 L793.0,252.0 L795.0,252.0 L797.0,252.0 L799.0,252.0 L801.0,252.0 L803.0,252.0 L805.0,252.0 L807.0,252.0 L809.0,252.0 L811.0,252.0 L813.0,252.0 L815.0,252.0 L817.0,252.0 L819.0,252.0 L821.0,252.0 L823.0,252.0 L825.0,252.0 L827.0,252.0 L829.0,252.0 L831.0,252.0 L833.0,251.9 L835.0,251.6 L837.0,250.9 L839.0,249.4 L841.0,247.5 L843.0,245.6 L845.0,245.0 L847.0,245.9 L849.0,247.9 L851.0,249.8 L853.0,251.1 L855.0,251.7 L857.0,251.9 L859.0,252.0 L861.0,252.0 L863.0,252.7 L865.0,258.7 L867.0,260.7 L869.0,257.8 L871.0,302.9 L873.0,304.2 L875.0,253.1 L877.0,237.8 L879.0,239.8 L881.0,249.7 L883.0,251.9 L885.0,252.0 L887.0,252.0 L889.0,252.0 L891.0,252.0 L893.0,252.0 L895.0,252.0 L897.0,252.1 L899.0,252.3 L901.0,252.7 L903.0,253.5 L905.0,254.9 L907.0,257.2 L909.0,260.2 L911.0,263.5 L913.0,266.3 L915.0,267.9 L917.0,267.6 L919.0,265.7 L921.0,262.7 L923.0,259.4 L925.0,256.6 L927.0,254.5 L929.0,253.2 L931.0,252.5 L933.0,252.2 L935.0,252.1 L937.0,252.0 L939.0,252.0 L941.0,252.0 L943.0,252.0 L945.0,252.0 L947.0,252.0 L949.0,252.0 L951.0,252.0 L953.0,252.0 L955.0,252.0 L957.0,252.0 L959.0,252.0 L961.0,252.0 L963.0,252.0 L965.0,252.0 L967.0,252.0 L969.0,252.0 L971.0,252.0 L973.0,252.0 L975.0,252.0 L977.0,252.0 L979.0,252.0 L981.0,252.0 L983.0,252.0 L985.0,252.0 L987.0,252.0 L989.0,252.0 L991.0,252.0 L993.0,252.0 L995.0,252.0 L997.0,251.9 L999.0,251.8 L1001.0,251.3 L1003.0,250.3 L1005.0,248.5 L1007.0,246.5 L1009.0,245.1 L1011.0,245.3 L1013.0,246.9 L1015.0,248.9 L1017.0,250.5 L1019.0,251.4 L1021.0,251.8 L1023.0,252.0 L1025.0,252.0 L1027.0,252.1 L1029.0,254.7 L1031.0,261.8 L1033.0,257.1 L1035.0,272.4 L1037.0,322.0 L1039.0,272.4 L1041.0,243.9 L1043.0,236.1 L1045.0,245.5 L1047.0,251.4 L1049.0,252.0 L1051.0,252.0 L1053.0,252.0 L1055.0,252.0 L1057.0,252.0 L1059.0,252.0 L1061.0,252.1 L1063.0,252.2 L1065.0,252.4 L1067.0,253.0 L1069.0,254.1 L1071.0,256.0 L1073.0,258.6 L1075.0,261.8 L1077.0,265.0 L1079.0,267.3 L1081.0,268.0 L1083.0,266.9 L1085.0,264.3 L1087.0,261.0 L1089.0,257.9 L1091.0,255.4 L1093.0,253.8 L1095.0,252.8 L1097.0,252.3 L1099.0,252.1 L1101.0,252.0 L1103.0,252.0 L1105.0,252.0 L1107.0,252.0 L1109.0,252.0 L1111.0,252.0 L1113.0,252.0 L1115.0,252.0 L1117.0,252.0 L1119.0,252.0 L1121.0,252.0 L1123.0,252.0 L1125.0,252.0 L1127.0,252.0 L1129.0,252.0 L1131.0,252.0 L1133.0,252.0 L1135.0,252.0 L1137.0,252.0 L1139.0,252.0 L1141.0,252.0 L1143.0,252.0 L1145.0,252.0 L1147.0,252.0 L1149.0,252.0 L1151.0,252.0 L1153.0,252.0 L1155.0,252.0 L1157.0,252.0 L1159.0,252.0 L1161.0,252.0 L1163.0,251.9 L1165.0,251.6 L1167.0,250.9 L1169.0,249.4 L1171.0,247.5 L1173.0,245.6 L1175.0,245.0 L1177.0,245.9 L1179.0,247.9 L1181.0,249.8 L1183.0,251.1 L1185.0,251.7 L1187.0,251.9 L1189.0,252.0 L1191.0,252.0 L1193.0,252.7 L1195.0,258.7 L1197.0,260.7 L1199.0,257.8 L1201.0,302.9 L1203.0,304.2 L1205.0,253.1 L1207.0,237.8 L1209.0,239.8 L1211.0,249.7 L1213.0,251.9 L1215.0,252.0 L1217.0,252.0 L1219.0,252.0 L1221.0,252.0 L1223.0,252.0 L1225.0,252.0 L1227.0,252.1 L1229.0,252.3 L1231.0,252.7 L1233.0,253.5 L1235.0,254.9 L1237.0,257.2 L1239.0,260.2 L1241.0,263.5 L1243.0,266.3 L1245.0,267.9 L1247.0,267.6 L1249.0,265.7 L1251.0,262.7 L1253.0,259.4 L1255.0,256.6 L1257.0,254.5 L1259.0,253.2 L1261.0,252.5 L1263.0,252.2 L1265.0,252.1 L1267.0,252.0 L1269.0,252.0 L1271.0,252.0 L1273.0,252.0 L1275.0,252.0 L1277.0,252.0 L1279.0,252.0 L1281.0,252.0 L1283.0,252.0 L1285.0,252.0 L1287.0,252.0 L1289.0,252.0 L1291.0,252.0 L1293.0,252.0 L1295.0,252.0 L1297.0,252.0 L1299.0,252.0 L1301.0,252.0 L1303.0,252.0 L1305.0,252.0 L1307.0,252.0 L1309.0,252.0 L1311.0,252.0 L1313.0,252.0 L1315.0,252.0 L1317.0,252.0 L1319.0,252.0 L1321.0,252.0 L1323.0,252.0 L1325.0,252.0"/></g>
+  </svg>
+  <div class="wrap reveal">
+    <div class="col-text">
+      <div class="eyebrow">Naturalistic-film fMRI · emotion decoding</div>
+      <h1>Can a machine read how a film makes you feel?</h1>
+      <p class="lead">This ongoing project asks whether automatic emotion labels can match the moment-by-moment feeling that human viewers report during films, well enough to ease the slow, costly human annotation that affective neuroscience now depends on. I test this from two sides: one arm reads the words the characters speak, the other reads the brain's response.</p>
+      <a class="cta" href="https://github.com/jessicathao/emotion-label-validation-fmri"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg> Explore the repository</a>
+      <p class="who"><b>Le Thi Thach Thao (Jessica)</b> · National Taiwan University</p>
+    </div>
+    <div class="hero-codes">
+      <span class="qr-lead">Scan to open</span>
+      <div class="qr-row">
+        <figure class="qr-tile"><img src="img/qr_page.png" alt="QR code to this page"><figcaption>This page</figcaption></figure>
+        <figure class="qr-tile"><img src="img/qr_code.png" alt="QR code to the code repository"><figcaption>Code on GitHub</figcaption></figure>
+      </div>
+    </div>
+  </div>
+  <div class="scrollcue"><span class="m"></span> Scroll</div>
+</header>
+  <section class="block">
+    <div class="wrap reveal">
+      <div class="shead"><span class="snum">01</span><span class="slabel">The question</span></div>
+      <h2>Can a model match the human ratings?</h2>
+      <hr class="rule">
+      <p class="lead intro-center">Naturalistic-film fMRI needs a feeling for every moment, and today only humans can label it. Two arms test whether a model can.</p>
+      <div class="flow3">
+        <div class="fcard ref"><span class="tag">HUMAN</span><span class="ct">The feeling</span><span class="cd">the averaged human consensus, the ground truth.</span><span class="arrow" aria-hidden="true">&rarr;</span></div>
+        <div class="fcard"><span class="tag">TEXT</span><span class="ct">The words</span><span class="cd">transcript scored by BERT or Gemini.</span><span class="arrow" aria-hidden="true">&rarr;</span></div>
+        <div class="fcard"><span class="tag">BRAIN</span><span class="ct">The signal</span><span class="cd">valence decoded straight from fMRI.</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="block tint">
+    <div class="wrap reveal">
+      <div class="shead"><span class="snum">02</span><span class="slabel">The data</span></div>
+      <h2>Emo-FilM, an open affective-neuroscience dataset</h2>
+      <hr class="rule">
+      <p class="lead">The human ground truth is the averaged consensus of 44 annotators over 14 short films, all openly released under CC0.</p>
+      <div class="stats">
+        <div class="stat"><div class="v">14</div><span class="l">short films</span></div>
+        <div class="stat"><div class="v">30</div><span class="l">participants · 3 T</span></div>
+        <div class="stat"><div class="v">44</div><span class="l">annotators</span></div>
+        <div class="stat"><div class="v">50</div><span class="l">emotion items</span></div>
+        <div class="stat"><div class="v">1.3 s</div><span class="l">TR</span></div>
+      </div>
+      <p class="note data-note">Preprocessed BOLD in MNI space. OpenNeuro: fMRI <a href="https://openneuro.org/datasets/ds004892">ds004892</a> (CC0) and annotations <a href="https://openneuro.org/datasets/ds004872">ds004872</a> (CC0). Morgenroth et al. (2025), <em>Scientific Data</em> 12:684.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap reveal">
+      <div class="split">
+        <div class="col-text">
+          <div class="shead"><span class="snum">03</span><span class="slabel">A transcription trap</span></div>
+          <h2>The labels read the wrong words</h2><hr class="rule"><p class="lead">Whisper transcribes songs, recited verse, and credits as if they were dialogue, and the models score that text. On <em>Spaceman</em>, removing about 94 seconds of song and credits, 93 paired seconds of data, flips the correlation.</p><p class="note">BERT <span class="k">−0.29 → −0.11</span> (phantom negative). Gemini <span class="k">−0.10 → +0.24</span> (real positive). Found in 5 of 12 films.</p>
+        </div>
+        <figure class="">
+          <div class="flabel"><span>Spaceman · same 94 s removed</span><span class="zoom">tap to enlarge</span></div>
+          <button class="imglink" data-full="img/fig_trap.png" aria-label="Enlarge: Spaceman · same 94 s removed"><img src="img/fig_trap.png" alt="Dumbbell chart: every classifier moves toward zero once song and credits text is removed." loading="lazy"></button>
+          <figcaption>Polarized classifiers scored the despairing lyrics as strong negatives; the contrast collapses toward zero once the non-dialogue text is removed.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="block tint">
+    <div class="wrap reveal">
+      <div class="split rev">
+        <div class="col-text">
+          <div class="shead"><span class="snum">04</span><span class="slabel">The words</span></div>
+          <h2>Machines agree only where words carry the feeling</h2><hr class="rule"><p class="lead">Give a strong model the surrounding dialogue and it tracks human valence, but <span class="em">only on talk-driven films.</span></p>
+        </div>
+        <figure class="">
+          <div class="flabel"><span>Agreement with human feeling · four films</span><span class="zoom">tap to enlarge</span></div>
+          <button class="imglink" data-full="img/fig_language.png" aria-label="Enlarge: Agreement with human feeling · four films"><img src="img/fig_language.png" alt="Slopegraph: Gemini rises across dialogue-driven films when given context; per-segment BERT does not." loading="lazy"></button>
+          <figcaption>Per-segment BERT shows no real context gain; its one rise is blurring, not comprehension. Gemini's gains are genuine, and only on talk-driven films.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap reveal">
+      <div class="split">
+        <div class="col-text">
+          <div class="shead"><span class="snum">05</span><span class="slabel">The brain, first look</span></div>
+          <h2>One subject cannot settle the sign</h2><hr class="rule"><p class="lead">Same film, same pipeline. Human valence decodes <span class="em">positive</span> from the highest-motion subject and <span class="em">negative</span> from the cleanest, so a single brain is not enough.</p><p class="note">The <span class="k">+0.21</span> we almost reported, shown only as the result we corrected. It motivates a properly powered test.</p>
+        </div>
+        <figure class="">
+          <div class="flabel"><span><span class="zoom">RETRACTED</span> · shown only as the error we caught</span></div>
+          <div class="flabel"><span>Tears of Steel · same film, opposite signs</span><span class="zoom">tap to enlarge</span></div>
+          <button class="imglink" data-full="img/fig_subject.png" aria-label="Enlarge: Tears of Steel · same film, opposite signs"><img src="img/fig_subject.png" alt="Two time-series: one subject decodes valence positively, another negatively, on the same film." loading="lazy"></button>
+          <figcaption>Same mask, same pipeline, same film. The +0.21 from one subject reverses on another; a single subject cannot establish a sign.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="block dark">
+    <div class="wrap reveal">
+      <div class="split top">
+        <div class="col-text">
+          <div class="shead"><span class="snum">06</span><span class="slabel">The brain, the controlled test</span></div>
+          <h2>A validated decoder finds no occipital valence</h2>
+          <hr class="rule">
+          <p class="lead">Powered to five subjects per film with a positive control, the decoder <span class="em">recovers a planted signal</span> but reads real valence at chance, on both films.</p>
+          <p class="note">Read from <span class="k">43,683 voxels</span> of posterior occipital cortex, a visual region, not an affect region.</p>
+        </div>
+        <figure class="roi">
+          <div class="flabel"><span>The region we read · occipital</span><span class="zoom">tap to enlarge</span></div>
+          <button class="imglink" data-full="img/fig_roi.png" aria-label="Enlarge: The region we read · occipital"><img src="img/fig_roi.png" alt="Brain ROI: posterior occipital gray matter, 43,683 voxels, a visual region." loading="lazy"></button>
+          <figcaption>Posterior occipital: a valence-correlated visual signal, not affect.</figcaption>
+        </figure>
+      </div>
+      <figure class="banner">
+          <div class="flabel"><span>Validated decoder · two films</span><span class="zoom">tap to enlarge</span></div>
+          <button class="imglink" data-full="img/fig_decoder.png" aria-label="Enlarge: Validated decoder · two films"><img src="img/fig_decoder.png" alt="A validated decoder recovers a planted control signal but reads real valence at chance on both films." loading="lazy"></button>
+          <figcaption>The positive control passes (left); real human valence sits at its own chance level on both films (right).</figcaption>
+        </figure>
+    </div>
+  </section>
+  <section class="block tint">
+    <div class="wrap reveal">
+      <div class="split rev">
+        <div class="col-text">
+          <div class="shead"><span class="snum">07</span><span class="slabel">What it tracks</span></div>
+          <h2>The brain reads the picture, not the feeling</h2><hr class="rule"><p class="lead">Run the same decoder on what is on screen, and the occipital signal follows the film's <span class="em">motion</span>, while valence stays flat.</p>
+        </div>
+        <figure class="">
+          <div class="flabel"><span>Occipital signal · what it decodes</span><span class="zoom">tap to enlarge</span></div>
+          <button class="imglink" data-full="img/fig_motion.png" aria-label="Enlarge: Occipital signal · what it decodes"><img src="img/fig_motion.png" alt="Bar chart: the occipital signal decodes motion and visual features above chance, while valence stays at chance." loading="lazy"></button>
+          <figcaption>Visual features clear chance; valence does not. It is a visual region; it carries the picture.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap reveal">
+      <div class="split">
+        <div class="col-text">
+          <div class="shead"><span class="snum">08</span><span class="slabel">Where they meet</span></div>
+          <h2>Both arms stop at the same wall</h2>
+          <hr class="rule">
+          <p class="lead">Feeling drifts slowly, holding a memory of about 80 to 110 seconds. Short films leave too few independent moments for text or brain to lock on.</p>
+          <p class="note">Reported as effect sizes with cross-model, cross-film replication. Two arms converging on the same limit is stronger than any single p-value.</p>
+        </div>
+        <div class="conv">
+          <svg viewBox="0 0 680 300" role="img" aria-label="The words arm and the brain arm both advance from the left and stop at a shared wall: the 80 to 110 second feeling-memory against short films.">
+            <rect x="500" y="24" width="13" height="196" rx="2" fill="#c9a227"></rect>
+            <text x="506" y="244" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="14" font-weight="700" fill="#9a7d1e">THE WALL</text>
+            <text text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11.5" fill="#6a6f73">
+              <tspan x="506" y="264">80 to 110 s feeling-memory</tspan>
+              <tspan x="506" y="280">vs short films</tspan>
+            </text>
+            <text x="14" y="80" font-family="ui-monospace,Menlo,monospace" font-size="13" font-weight="700" fill="#1c7293">THE WORDS</text>
+            <line x1="16" y1="112" x2="484" y2="112" stroke="#1c7293" stroke-width="3.6" stroke-linecap="round"/>
+            <path d="M484,112 l-15,-7.5 v15 z" fill="#1c7293"/>
+            <text x="16" y="136" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="14" fill="#16242b">gains only where dialogue carries the feeling</text>
+            <text x="14" y="180" font-family="ui-monospace,Menlo,monospace" font-size="13" font-weight="700" fill="#1c7293">THE BRAIN</text>
+            <line x1="16" y1="212" x2="484" y2="212" stroke="#5b8aa3" stroke-width="3.6" stroke-linecap="round" stroke-dasharray="2 8"/>
+            <path d="M484,212 l-15,-7.5 v15 z" fill="#5b8aa3"/>
+            <text x="16" y="236" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="14" fill="#16242b">tracks the motion, not the feeling</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block dark close">
+    <div class="wrap reveal">
+      <div class="shead"><span class="snum">·</span><span class="slabel">Takeaway</span></div>
+      <hr class="rule">
+      <p class="lead">Text-based sentiment, even with a frontier LLM, is not yet a robust substitute for human emotion annotation in naturalistic film. The language and brain arms reach the same wall from two directions. Every figure, effect size, and control is public.</p>
+      <a class="cta" href="https://github.com/jessicathao/emotion-label-validation-fmri"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg> Explore the repository</a>
+      <p class="signoff">Le Thi Thach Thao (Jessica) · National Taiwan University<br><span class="ty">Thank you.</span></p>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot-refs">
+        <span class="reflabel">Data &amp; reference</span>
+        <p>Morgenroth, E., Moia, S., Vilaclara, L. et al. <em>Emo-FilM: A multimodal dataset for affective neuroscience using naturalistic stimuli.</em> Scientific Data 12, 684 (2025). <a href="https://doi.org/10.1038/s41597-025-04803-5">doi.org/10.1038/s41597-025-04803-5</a></p>
+        <p>Human ground truth: 44-annotator consensus, Emo-FilM. OpenNeuro: fMRI <a href="https://openneuro.org/datasets/ds004892">ds004892</a> (CC0), annotations <a href="https://openneuro.org/datasets/ds004872">ds004872</a> (CC0).</p>
+      </div>
+      <div class="foot-meta">
+        <span>Contact: <a href="mailto:jessie.thachthao@gmail.com">jessie.thachthao@gmail.com</a></span>
+        <span>© 2026 Le Thi Thach Thao (Jessica). All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <div class="lb" id="lb" aria-hidden="true"><button class="close" id="lbClose" aria-label="Close">&times;</button><img id="lbImg" src="" alt="Enlarged figure"></div>
+<script src="script.js" defer></script>
+</body>
+</html>
