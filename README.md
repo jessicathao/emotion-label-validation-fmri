@@ -5,6 +5,8 @@ Validating transformer-generated emotion labels against human consensus in natur
 Status: In active development (Brainhack School 2026 final project). Public repository.
 Author: Thach Thao Le (Jessica), PhD student, Linguistics, National Taiwan University
 
+**Live project page:** https://jessicathao.github.io/emotion-label-validation-fmri/
+
 ## Project overview
 
 This project tests whether emotion labels generated automatically by transformer language models agree with human consensus annotations, using the Emo-FilM dataset: fMRI and emotion ratings collected while participants watched short films.
