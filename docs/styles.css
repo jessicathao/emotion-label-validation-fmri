@@ -125,10 +125,10 @@ figcaption{color:var(--grey);font-size:clamp(12px,1.05vw,13.5px);line-height:1.5
 @keyframes cue{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,12px)}}
 
 /* hero motion */
-.ecg{will-change:transform}
-.ecg.s1{animation:ecgscroll 7s linear infinite}
-.ecg.s2{animation:ecgscroll 11s linear infinite}
-@keyframes ecgscroll{from{transform:translateX(0)}to{transform:translateX(-660px)}}
+.signal{will-change:transform}
+.signal.s1{animation:sigscroll 7s linear infinite}
+.signal.s2{animation:sigscroll 11s linear infinite}
+@keyframes sigscroll{from{transform:translateX(0)}to{transform:translateX(-660px)}}
 
 /* ============================== SETUP — horizontal 3-step flow ============================== */
 .intro-center{max-width:64ch}
@@ -208,7 +208,7 @@ figcaption{color:var(--grey);font-size:clamp(12px,1.05vw,13.5px);line-height:1.5
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1!important;transform:none!important;transition:none!important}
-  .ecg{animation:none!important}
+  .signal{animation:none!important}
   .scrollcue .m::after{animation:none}
   .cta{transition:none}
 }
