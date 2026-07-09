@@ -254,3 +254,8 @@ data/decode_cache/*.npz
 /*.pptx
 /slide-*.jpg
 /slide-*.jpeg
+results_verify/
+docs/results_logs/
+results/*.json
+data/decode_cache_*/
+notebooks/*.ipynb

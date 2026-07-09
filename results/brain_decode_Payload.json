@@ -1,17 +1,45 @@
 {
   "film": "Payload",
+  "analysis_date": "2026-06-19",
+  "target": "PleasantOther consensus (annotation col 3), HRF-convolved, placed at film onset",
+  "mask": "posterior MNI gray matter, y < -60 mm, 43683 voxels",
+  "estimator": "within-fold Pearson (single subject); leave-one-subject-out Ridge (pooled)",
+  "alpha": 10000,
+  "significance": "withheld project-wide; descriptive effect sizes only",
   "subjects": ["sub-S08", "sub-S05", "sub-S11", "sub-S15", "sub-S06"],
+  "subject_fd_mean": {"sub-S08": 0.091, "sub-S05": 0.121, "sub-S11": 0.121, "sub-S15": 0.128, "sub-S06": 0.129},
   "n_volumes_total": 3873,
+  "qc_note": "five lowest-motion Payload runs, pre-registered by mriqc fd_mean BEFORE any decode; sub-S07 (the June-7 PoC subject) ranked 28/30 at fd_mean 0.346 and is excluded",
+
   "positive_control_pooled": {
+    "description": "signal planted at each timescale, recovered via leave-one-subject-out; a valid estimator must recover the ~100s valence timescale",
     "timescales_s": [250, 150, 100, 60, 30],
+    "valence_timescale_s": 100,
     "recovery_r_snr1": [0.326, 0.281, 0.276, 0.302, 0.319],
     "recovery_r_snr0_3": [0.090, 0.081, 0.074, 0.109, 0.107],
-    "valence_timescale_s": 100
+    "verdict": "PASS - strong and uniform across timescales; the estimator can detect signal at the valence timescale"
   },
+
   "real_valence_pooled": {
+    "description": "real human PleasantOther valence, leave-one-subject-out, scored within each held-out subject",
     "loso_r_per_subject": [0.079, -0.108, 0.177, 0.020, -0.002],
     "loso_mean": 0.033,
+    "shift_null_means": [0.058, 0.032, 0.025, 0.048, 0.056],
     "shift_null_mean": 0.044,
-    "shift_null_sd": 0.013
-  }
+    "shift_null_sd": 0.013,
+    "verdict": "NULL - the real decode sits below/inside its own circular-shift null"
+  },
+
+  "single_subject_summary": {
+    "estimator": "within-fold Pearson, alpha=10000",
+    "runs": [
+      {"subject": "sub-S07", "film": "TearsOfSteel", "fd_mean": 0.554, "r": 0.206, "note": "highest-motion run in the dataset; the retracted June-7 PoC"},
+      {"subject": "sub-S31", "film": "TearsOfSteel", "fd_mean": 0.093, "r": -0.161, "note": "lowest-motion ToS run; opposite sign to S07 on the SAME film"},
+      {"subject": "sub-S08", "film": "Payload", "fd_mean": 0.091, "r": -0.161, "note": "lowest-motion Payload run"}
+    ],
+    "single_subject_positive_control_100s_snr2": 0.147,
+    "verdict": "single-subject estimation FAILS the positive control at the valence timescale (recovers only +0.147 with a planted signal at SNR 2.0); single-subject estimates are unstable and non-replicating"
+  },
+
+  "conclusion": "Controlled null. Occipital decoding of PleasantOther valence is not estimable above chance on Emo-FilM, single-subject or pooled across five subjects. The positive control passes on the pooled estimator while the real decode is at chance (+0.033 vs null +0.044 +/- 0.013). This is the same ~80-110s autocorrelation-vs-duration wall the label and inference arms reach, from the neural side."
 }

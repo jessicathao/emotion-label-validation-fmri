@@ -1,47 +1,35 @@
 {
   "film": "TearsOfSteel",
-  "subjects": [
-    "sub-S31",
-    "sub-S08",
-    "sub-S11",
-    "sub-S25",
-    "sub-S04"
-  ],
+  "analysis_date": "2026-06-19",
+  "target": "PleasantOther consensus (annotation col 3), HRF-convolved, placed at film onset",
+  "mask": "posterior MNI gray matter, y < -60 mm, 43683 voxels",
+  "estimator": "leave-one-subject-out Ridge (pooled)",
+  "alpha": 10000,
+  "significance": "withheld project-wide; descriptive effect sizes only",
+  "subjects": ["sub-S31", "sub-S08", "sub-S11", "sub-S25", "sub-S04"],
+  "subject_fd_mean": {"sub-S31": 0.093, "sub-S08": 0.105, "sub-S11": 0.105, "sub-S25": 0.126, "sub-S04": 0.137},
   "n_volumes_total": 2257,
+  "qc_note": "five lowest-motion Tears of Steel runs, pre-registered by mriqc fd_mean BEFORE any decode; sub-S07 (the retracted June-7 PoC subject) ranks last 30/30 at fd_mean 0.554 and is excluded",
+
   "positive_control_pooled": {
-    "timescales_s": [
-      250,
-      150,
-      100,
-      60,
-      30
-    ],
-    "recovery_r_snr1": [
-      0.20369986166400628,
-      0.2027823069941271,
-      0.2485068660460415,
-      0.21273141017979064,
-      0.24403322028589303
-    ],
-    "recovery_r_snr0_3": [
-      0.06333725897189665,
-      0.10927910527532288,
-      0.1543840608233266,
-      0.10258489814044111,
-      0.12543018846555248
-    ],
-    "valence_timescale_s": 100
+    "description": "signal planted at each timescale, recovered via leave-one-subject-out; a valid estimator must recover the ~100s valence timescale",
+    "timescales_s": [250, 150, 100, 60, 30],
+    "valence_timescale_s": 100,
+    "recovery_r_snr1": [0.204, 0.203, 0.249, 0.213, 0.244],
+    "recovery_r_snr0_3": [0.063, 0.109, 0.154, 0.103, 0.125],
+    "verdict": "PASS - recovers the planted signal at the valence timescale and uniformly across timescales; the estimator can detect signal"
   },
+
   "real_valence_pooled": {
-    "loso_r_per_subject": [
-      0.021,
-      0.075,
-      0.178,
-      0.07,
-      0.102
-    ],
+    "description": "real human PleasantOther valence, leave-one-subject-out, scored within each held-out subject",
+    "loso_r_per_subject": [0.021, 0.075, 0.178, 0.070, 0.102],
     "loso_mean": 0.089,
     "shift_null_mean": 0.127,
-    "shift_null_sd": 0.042
-  }
+    "shift_null_sd": 0.042,
+    "verdict": "NULL - the real decode (+0.089) sits BELOW its own circular-shift null (+0.127 +/- 0.042)"
+  },
+
+  "elevated_null_note": "The Tears of Steel shift-null is elevated (+0.127) and wider (sd 0.042) than Payload's (+0.044, sd 0.013) because ToS is dialogue-light and visually intense: occipital BOLD carries strong stimulus-locked visual structure that even a brain-decoupled, film-autocorrelated target partly correlates with. A naive test against zero would have called the real +0.089 a positive hit; the circular-shift null catches it. This is the effect-sizes-not-p-values thesis reaching the brain arm from the neural side.",
+
+  "conclusion": "Controlled null, replicating Payload. Occipital decoding of PleasantOther valence is not estimable above chance on Tears of Steel either: the positive control passes (+0.249 at the valence timescale) while the real decode (+0.089) sits below its own shift-null (+0.127 +/- 0.042). The two-film null (dialogue-dense Payload AND dialogue-light Tears of Steel), each with a passing positive control, removes the 'just a Payload thing' objection and demonstrates the naive-zero-test false positive."
 }
